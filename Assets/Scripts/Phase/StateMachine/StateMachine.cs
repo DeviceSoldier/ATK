@@ -15,8 +15,11 @@ public class StateMachine<T>
 
     public void SetEntry(T nodeId)
     {
-        if (_nodes.ContainsKey(nodeId))
-            _currentNodeId = nodeId;
+        if (!_nodes.ContainsKey(nodeId))
+            return;
+        
+        _currentNodeId = nodeId;
+        _nodes[nodeId].Enter();
     }
 
     public void AddNode(StateMachineNode<T> node)
@@ -48,7 +51,7 @@ public class StateMachine<T>
     {
         StateMachineEdge<T> edge = new StateMachineEdge<T>(to);
         edge.AddTransformConditionFunc(condition);
-        AddEdge(from,edge);
+        AddEdge(from, edge);
     }
 
     private void SetState(T nodeId)
@@ -62,6 +65,9 @@ public class StateMachine<T>
 
     public void Update()
     {
+        if (!_nodes.ContainsKey(_currentNodeId))
+            return;
+
         var transformed = false;
         var currentNode = _nodes[_currentNodeId];
         var edges = currentNode.Edges;
