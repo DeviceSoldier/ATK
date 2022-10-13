@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 // PlayerMove_1005
-// ƒvƒŒƒCƒ„[‚Ì‘OiˆÚ“®ˆ—
-// XV“úF2022/10/08
-// XVÒFŠp“cƒGƒŠƒbƒN—E‹M
-// ƒAƒ^ƒbƒ`æFPlayerOBJ
+// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®å‰é€²ç§»å‹•å‡¦ç†
+// æ›´æ–°æ—¥ï¼š2022/10/08
+// æ›´æ–°è€…ï¼šè§’ç”°ã‚¨ãƒªãƒƒã‚¯å‹‡è²´
+// ã‚¢ã‚¿ãƒƒãƒå…ˆï¼šPlayerOBJ
 
 public class PlayerMove_1005 : MonoBehaviour
 {
