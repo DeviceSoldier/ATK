@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class BossHP : HPObject
 {
+    public GameObject deleteobj;
     protected override void OnHpZero()
     {
-        Destroy(gameObject);
+        Destroy(deleteobj);
     }
 }
