@@ -3958,6 +3958,7 @@ GameObject:
   - component: {fileID: 709207669}
   - component: {fileID: 709207672}
   - component: {fileID: 709207671}
+  - component: {fileID: 709207673}
   m_Layer: 0
   m_Name: DoragonRoot
   m_TagString: Untagged
@@ -4019,6 +4020,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHp: 50
   godMode: 0
+--- !u!114 &709207673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709207668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 799c79a7cffcd324ba6251a0412d12e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 10
+  direction: {x: 0, y: 1}
+  height: 2
 --- !u!1001 &733070502
 PrefabInstance:
   m_ObjectHideFlags: 0

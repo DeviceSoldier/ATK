@@ -11,10 +11,12 @@ public class PhaseManager : MonoBehaviour
     [SerializeField] private float phaseCTime = 20f;
 
     private GameObject _player;
+    private GameObject _dragon;
 
     private void Start()
     {
         _player = FindObjectOfType<PhaseA_TargetLook>().gameObject;
+        _dragon = FindObjectOfType<Doragon_Move_A_Test>().gameObject;
         
         _stateMachine.AddNode(GamePhase.A, () => { }, () =>
         {
@@ -34,7 +36,14 @@ public class PhaseManager : MonoBehaviour
             Timeline.ResetTimer();
             _player.GetComponent<PlayerMove_1005>().enabled = true;
             _player.GetComponent<PhaseA_PhaseB>().enabled = true;
-        }, () => { Debug.Log("Leave phase B"); });
+            _dragon.GetComponent<BossBPosition>().enabled = true;
+        }, () =>
+        {
+            Debug.Log("Leave phase B"); 
+            //_player.GetComponent<PlayerMove_1005>().enabled = false;
+            //_player.GetComponent<PhaseA_PhaseB>().enabled = false;
+            //_dragon.GetComponent<BossBPosition>().enabled = false;
+        });
 
         _stateMachine.AddNode(GamePhase.C, () => { }, () =>
         {
