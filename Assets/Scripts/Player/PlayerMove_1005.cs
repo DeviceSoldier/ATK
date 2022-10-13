@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 // PlayerMove_1005
-// �v���C���[�̑O�i�ړ�����
-// �X�V���F2022/10/08
-// �X�V�ҁF�p�c�G���b�N�E�M
-// �A�^�b�`��FPlayerOBJ
+// プレイヤーの前進移動処理
+// 更新日：2022/10/08
+// 更新者：角田エリック勇貴
+// アタッチ先：PlayerOBJ
 
 public class PlayerMove_1005 : MonoBehaviour
 {
