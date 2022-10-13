@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,6 +123,174 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &309614682
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4083104523005850677, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083104523005850677, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083104523005850677, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083104523579276212, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083104523579276212, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 9200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215391168588047137, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+      propertyPath: m_Name
+      value: SystemStatusManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215391168588047138, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+      propertyPath: password
+      value: 722C6680F93546F1AD5D228B1BAB2D75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215391168588047138, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+      propertyPath: gameStopCallback.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215391168588047138, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+      propertyPath: gameStopCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215391168588047138, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+      propertyPath: gameStopCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1740653852}
+    - target: {fileID: 6215391168588047138, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+      propertyPath: gameStartCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 384014289}
+    - target: {fileID: 6215391168588047138, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+      propertyPath: gameStopCallback.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215391168588047138, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+      propertyPath: gameStopCallback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnGameStop
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215391168588047138, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+      propertyPath: gameStartCallback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnGameStart
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215391168588047138, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+      propertyPath: gameStopCallback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameStopCallback, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215391168588047138, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+      propertyPath: gameStartCallback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameStartCallback, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215391168588047138, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+      propertyPath: gameStopCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215391168588047138, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+      propertyPath: gameStartCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215391168588047139, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215391168588047139, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215391168588047139, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215391168588047139, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215391168588047139, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215391168588047139, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215391168588047139, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215391168588047139, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215391168588047139, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215391168588047139, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6215391168588047139, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+--- !u!1 &384014288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 384014290}
+  - component: {fileID: 384014289}
+  m_Layer: 0
+  m_Name: GameStartCallback
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &384014289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384014288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2ef56830ffd8d349b01b7bf971bee5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &384014290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384014288}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 503.37662, y: -29.402802, z: 132.09167}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1584072458}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1192163592
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,3 +467,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!4 &1584072458 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6215391168588047139, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
+  m_PrefabInstance: {fileID: 309614682}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1740653851
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1740653853}
+  - component: {fileID: 1740653852}
+  m_Layer: 0
+  m_Name: GameStopCallback
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1740653852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740653851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11063f08c38c1bc40bea1e3e905e6955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1740653853
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740653851}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 503.37662, y: -29.402802, z: 132.09167}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1584072458}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
