@@ -27,5 +27,5 @@ Material:
     m_Floats:
     - _Dist: 0.1
     m_Colors:
-    - _QOffset: {r: 0, g: -3.4, b: 0, a: 0}
+    - _QOffset: {r: -0.15, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
