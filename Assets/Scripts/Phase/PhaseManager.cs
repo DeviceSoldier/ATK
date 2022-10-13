@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Nissensai2022.Runtime;
 using UnityEngine;
 
 
@@ -20,6 +21,9 @@ public class PhaseManager : MonoBehaviour
 
         _stateMachine.AddNode(GamePhase.B, () => { }, () =>
         {
+            ResultRank result = ResultRank.A;
+            Nissensai.SendResult(result);
+            
             Debug.Log("Enter phase B");
             Timeline.ResetTimer();
         }, () => { Debug.Log("Leave phase B"); });
