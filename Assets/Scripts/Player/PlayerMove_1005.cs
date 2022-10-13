@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 // PlayerMove_1005
-// ƒvƒŒƒCƒ„[‚Ì‘OiˆÚ“®ˆ—
-// XV“úF2022/10/08
-// XVÒFŠp“cƒGƒŠƒbƒN—E‹M
-// ƒAƒ^ƒbƒ`æFPlayerOBJ
+// ï¿½vï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½[ï¿½Ì‘Oï¿½iï¿½Ú“ï¿½ï¿½ï¿½ï¿½ï¿½
+// ï¿½Xï¿½Vï¿½ï¿½ï¿½F2022/10/08
+// ï¿½Xï¿½Vï¿½ÒFï¿½pï¿½cï¿½Gï¿½ï¿½ï¿½bï¿½Nï¿½Eï¿½M
+// ï¿½Aï¿½^ï¿½bï¿½`ï¿½ï¿½FPlayerOBJ
 
 public class PlayerMove_1005 : MonoBehaviour
 {
-    public float WalkSpeed;
+    private float WalkSpeed;
     void Start()
     {
         transform.Rotate(new Vector3(0, -82, 0));
+        WalkSpeed = 30;
     }
 
     // Update is called once per frame
