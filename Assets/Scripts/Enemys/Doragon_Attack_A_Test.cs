@@ -31,7 +31,7 @@ public class Doragon_Attack_A_Test : MonoBehaviour
             
             Vector3 vec = Player.transform.position - pos;
             
-            t.GetComponent<Rigidbody>().velocity = vec;
+            
         }
     }
 }
