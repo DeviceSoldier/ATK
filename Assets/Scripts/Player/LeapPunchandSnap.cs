@@ -6,9 +6,11 @@ public class LeapPunchandSnap : MonoBehaviour
 {
     
     private Vector3 prevPosition;
+    private Vector3 velocity;
 
     public GameObject Enemy;
     public GameObject Bullet;
+    public float hitcount;
 
     void Start()
     {
@@ -24,7 +26,7 @@ public class LeapPunchandSnap : MonoBehaviour
         // ���݈ʒu�擾
         var position = transform.position;
         // ���ݑ��x�擾
-        var velocity = (position - prevPosition) / Time.deltaTime;
+        velocity = (position - prevPosition) / Time.deltaTime;
         // �O�t���[���ʒu���X�V
         prevPosition = position;
         // ���ݑ��x���O�o��
@@ -34,8 +36,11 @@ public class LeapPunchandSnap : MonoBehaviour
     {
         if(collision.gameObject.tag == "Enemy")
         {
-
-            Destroy(collision.gameObject);
+            if (velocity.magnitude >= hitcount)
+            {
+                Destroy(collision.gameObject);
+            }
+            
         }
 
         if(collision.gameObject.tag == "Bullet")
