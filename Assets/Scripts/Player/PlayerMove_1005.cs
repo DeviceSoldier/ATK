@@ -9,10 +9,11 @@ using UnityEngine;
 
 public class PlayerMove_1005 : MonoBehaviour
 {
-    public float WalkSpeed;
+    private float WalkSpeed;
     void Start()
     {
         transform.Rotate(new Vector3(0, -82, 0));
+        WalkSpeed = 30;
     }
 
     // Update is called once per frame
