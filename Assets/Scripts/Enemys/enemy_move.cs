@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
-public class MonsterControl : MonoBehaviour
+public class enemy_move : MonoBehaviour
 {
-    public GameObject target;  //�ǂ��^�[�Q�b�g
-    public float speed;         //�ړ����x
-    public bool dead;           //�I�u�W�F�N�g�̏���
+    private GameObject target;  //追うターゲット
+    public float speed;         //移動速度
+    public bool dead;           //オブジェクトの消去
 
     void Start()
     {
-        speed = 9.5f;
         dead = false;
+        target = GameObject.Find("PlayerOBJ");
     }
     void Update()
     {

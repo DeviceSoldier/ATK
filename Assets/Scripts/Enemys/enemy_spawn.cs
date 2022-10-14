@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class enemy_spawn : MonoBehaviour
 {
-	public GameObject enemys;		//�o��������G�����Ă���
-	public float appearNextTime;  //�G���o������܂ł̎���
-	private float elapsedTime;				//�҂�����
+	public GameObject enemys;		//出現させる敵を入れておく
+	public float appearNextTime;  //敵が出現するまでの時間
+	private float elapsedTime;				//待ち時間
 
 	// Use this for initialization
 	void Start()
@@ -16,13 +16,14 @@ public class enemy_spawn : MonoBehaviour
 
 	void Update()
 	{
-		//�@�o�ߎ��Ԃ𑫂�
-		elapsedTime += Time.deltaTime;
-
-		//�@�o�ߎ��Ԃ��o������
-		if (elapsedTime > appearNextTime)
+		if (elapsedTime < appearNextTime) //　時間経過前
 		{
-			elapsedTime = 0f;
+			elapsedTime += Time.deltaTime; 
+		}
+
+		else //　経過時間が経ったら
+		{
+			Destroy(this.gameObject);
 			Instantiate(enemys, transform.position, transform.rotation);
 		}
 	}
