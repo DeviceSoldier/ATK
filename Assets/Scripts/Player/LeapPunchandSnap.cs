@@ -1,10 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-// LeapPunchandSnap
-// LeapMotion‚Å‚Ìƒpƒ“ƒ`‚Æƒrƒ“ƒ^ˆ—
-// XV“úF2022/10/06
-// XVÒFŠp“cƒGƒŠƒbƒN—E‹M
+
 public class LeapPunchandSnap : MonoBehaviour
 {
     
@@ -24,13 +21,13 @@ public class LeapPunchandSnap : MonoBehaviour
     {
         if (Mathf.Approximately(Time.deltaTime, 0))
             return;
-        // Œ»İˆÊ’uæ“¾
+        // ï¿½ï¿½ï¿½İˆÊ’uï¿½æ“¾
         var position = transform.position;
-        // Œ»İ‘¬“xæ“¾
+        // ï¿½ï¿½ï¿½İ‘ï¿½ï¿½xï¿½æ“¾
         var velocity = (position - prevPosition) / Time.deltaTime;
-        // ‘OƒtƒŒ[ƒ€ˆÊ’u‚ğXV
+        // ï¿½Oï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½Ê’uï¿½ï¿½ï¿½Xï¿½V
         prevPosition = position;
-        // Œ»İ‘¬“xƒƒOo—Í
+        // ï¿½ï¿½ï¿½İ‘ï¿½ï¿½xï¿½ï¿½ï¿½Oï¿½oï¿½ï¿½
         print($"velocity = {velocity.magnitude}");
     }
     private void OnCollisionEnter(Collision collision)
@@ -43,17 +40,17 @@ public class LeapPunchandSnap : MonoBehaviour
 
         if(collision.gameObject.tag == "Bullet")
         {
-            //“G‚ÌÀ•W‚ğ•Ï”pos‚É•Û‘¶
+            //ï¿½Gï¿½Ìï¿½ï¿½Wï¿½ï¿½Ïï¿½posï¿½É•Û‘ï¿½
             var pos = this.gameObject.transform.position;
-            //’e‚ÌƒvƒŒƒnƒu‚ğì¬
+            //ï¿½eï¿½Ìƒvï¿½ï¿½ï¿½nï¿½uï¿½ï¿½ï¿½ì¬
             var t = Instantiate(Bullet) as GameObject;
-            //’e‚ÌƒvƒŒƒnƒu‚ÌˆÊ’u‚ğ“G‚ÌˆÊ’u‚É‚·‚é
+            //ï¿½eï¿½Ìƒvï¿½ï¿½ï¿½nï¿½uï¿½ÌˆÊ’uï¿½ï¿½Gï¿½ÌˆÊ’uï¿½É‚ï¿½ï¿½ï¿½
             t.transform.position = pos;
-            //“G‚©‚çƒvƒŒƒCƒ„[‚ÉŒü‚©‚¤ƒxƒNƒgƒ‹‚ğ‚Â‚­‚é
-            //ƒvƒŒƒCƒ„[‚ÌˆÊ’u‚©‚ç“G‚ÌˆÊ’ui’e‚ÌˆÊ’uj‚ğˆø‚­
+            //ï¿½Gï¿½ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½[ï¿½ÉŒï¿½ï¿½ï¿½ï¿½ï¿½ï¿½xï¿½Nï¿½gï¿½ï¿½ï¿½ï¿½ï¿½Â‚ï¿½ï¿½ï¿½
+            //ï¿½vï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½[ï¿½ÌˆÊ’uï¿½ï¿½ï¿½ï¿½Gï¿½ÌˆÊ’uï¿½iï¿½eï¿½ÌˆÊ’uï¿½jï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             Vector3 vec = Enemy.transform.position - pos;
-            //’e‚ÌRigidBody2DƒRƒ“ƒ|ƒlƒ“ƒg‚Ìvelocity‚Éæ’ö‹‚ß‚½ƒxƒNƒgƒ‹‚ğ“ü‚ê‚Ä—Í‚ğ‰Á‚¦‚é
-            t.GetComponent<Rigidbody>().velocity = vec;
+            //ï¿½eï¿½ï¿½RigidBody2Dï¿½Rï¿½ï¿½ï¿½|ï¿½lï¿½ï¿½ï¿½gï¿½ï¿½velocityï¿½Éï¿½ï¿½ï¿½ï¿½ï¿½ß‚ï¿½ï¿½xï¿½Nï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä—Í‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            
         }
     }
 }

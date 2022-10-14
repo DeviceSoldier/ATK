@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - Guard
   - Stop
+  - PlayerBullet
   layers:
   - Default
   - TransparentFX
