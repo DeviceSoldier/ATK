@@ -4051,6 +4051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f8241871bdd3394a8bce28111a9e6df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitdamage: 0
 --- !u!114 &709207672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4065,6 +4066,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHp: 50
   godMode: 0
+  deleteobj: {fileID: 0}
+--- !u!114 &709207673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709207668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 799c79a7cffcd324ba6251a0412d12e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 10
+  direction: {x: 0, y: 1}
+  height: 2
 --- !u!114 &709207673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6171,7 +6188,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4caba0c9828459f41aab250d44c790bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WalkSpeed: 0
 --- !u!65 &1276931012
 BoxCollider:
   m_ObjectHideFlags: 0
