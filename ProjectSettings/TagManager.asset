@@ -9,6 +9,7 @@ TagManager:
   - Guard
   - Stop
   - PlayerBullet
+  - NavigationLine
   layers:
   - Default
   - TransparentFX
