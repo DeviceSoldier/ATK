@@ -6,9 +6,9 @@ using UnityEngine;
 public class PhaseManager : MonoBehaviour
 {
     private StateMachine<GamePhase> _stateMachine = new StateMachine<GamePhase>();
-    [SerializeField] private float phaseATime = 20f;
-    [SerializeField] private float phaseBTime = 20f;
-    [SerializeField] private float phaseCTime = 20f;
+    [SerializeField] public float phaseATime = 20f;
+    [SerializeField] public float phaseBTime = 20f;
+    [SerializeField] public float phaseCTime = 20f;
 
     private GameObject _player;
     private GameObject _dragon;
@@ -40,22 +40,30 @@ public class PhaseManager : MonoBehaviour
         }, () =>
         {
             Debug.Log("Leave phase B"); 
-            //_player.GetComponent<PlayerMove_1005>().enabled = false;
-            //_player.GetComponent<PhaseA_PhaseB>().enabled = false;
-            //_dragon.GetComponent<BossBPosition>().enabled = false;
+            _player.GetComponent<PhaseA_PhaseB>().enabled = false;
+            _dragon.GetComponent<BossBPosition>().enabled = false;
         });
 
         _stateMachine.AddNode(GamePhase.C, () => { }, () =>
         {
             Debug.Log("Enter phase C");
             Timeline.ResetTimer();
-        }, () => { Debug.Log("Leave phase C"); });
+            _dragon.GetComponent<BossCPosition>().enabled = true;
+        }, () =>
+        {
+            Debug.Log("Leave phase C");
+            _dragon.GetComponent<BossCPosition>().enabled = false;
+            _player.GetComponent<PlayerMove_1005>().enabled = false;
+        });
 
         _stateMachine.AddNode(GamePhase.Result, () => { }, () =>
         {
             Debug.Log("Enter phase Result");
             Timeline.StopTimer();
-        }, () => { });
+        }, () =>
+        {
+            
+        });
 
         _stateMachine.AddEdge(GamePhase.A, GamePhase.B, () => Timeline.CurrentTime > phaseATime);
         _stateMachine.AddEdge(GamePhase.B, GamePhase.C, () => Timeline.CurrentTime > phaseBTime);
