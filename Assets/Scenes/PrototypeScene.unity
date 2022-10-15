@@ -4164,7 +4164,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &566571579 stripped
 Transform:
@@ -6306,6 +6306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 742416830}
   Bullet: {fileID: 4633477985480247552, guid: 1add5a28362d00849a483265d6682739, type: 3}
+  hitcount: 0
 --- !u!65 &966519717
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7441,6 +7442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 742416830}
   Bullet: {fileID: 4633477985480247552, guid: 1add5a28362d00849a483265d6682739, type: 3}
+  hitcount: 0
 --- !u!65 &1176275025
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7732,6 +7734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4caba0c9828459f41aab250d44c790bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WalkSpeed: 35
 --- !u!65 &1276931012
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10675,7 +10678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3563f59b79b3532449c3b2f3ffcd16e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phaseATime: 20
+  phaseATime: 2
   phaseBTime: 20
   phaseCTime: 20
 --- !u!4 &1945914581
