@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,10 +16,11 @@ public class BossBPosition : MonoBehaviour
     {
         _phaseManager = FindObjectOfType<PhaseManager>();
         _playerTransform = FindObjectOfType<PlayerMove_1005>().transform;
+        
         direction = direction.normalized;
-        _keepVec = new Vector3(direction.x, 0f, direction.y);
-        _keepVec *= distance;
-        _keepVec.y = height;
+        var tempVec = direction * distance;
+        _keepVec = new Vector3(tempVec.x, height, tempVec.y);
+        _keepVec = _keepVec.normalized;
         transform.rotation = Quaternion.Euler(0f, 90f, 0f);
         transform.gameObject.GetComponentInChildren<Animator>().transform.localPosition = Vector3.zero;
     }
@@ -26,6 +28,8 @@ public class BossBPosition : MonoBehaviour
     void Update()
     {
         float deltaHeight = Mathf.Lerp(0f, -40f, Timeline.CurrentTime / _phaseManager.phaseBTime);
-        transform.position = _playerTransform.position + _keepVec + Vector3.up * deltaHeight;
+        var dis = Mathf.Lerp(distance, 100f, Timeline.CurrentTime / _phaseManager.phaseBTime);
+        var vec = _keepVec * dis;
+        transform.position = _playerTransform.position + vec + Vector3.up * deltaHeight;
     }
 }

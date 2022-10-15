@@ -4952,7 +4952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 799c79a7cffcd324ba6251a0412d12e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 100
+  distance: 500
   direction: {x: 0, y: 1}
   height: 2
 --- !u!114 &709207674
@@ -7855,6 +7855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd3172e97c5ee5645b0547ef7e32d96e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  phaseBPos: {x: 495, y: 3.26, z: 50}
 --- !u!4 &1288741277 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3977365282198197480, guid: 98bd1645b1b8d7a4d93c120852cde4a8, type: 3}
@@ -10678,7 +10679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3563f59b79b3532449c3b2f3ffcd16e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phaseATime: 2
+  phaseATime: 20
   phaseBTime: 20
   phaseCTime: 20
 --- !u!4 &1945914581
