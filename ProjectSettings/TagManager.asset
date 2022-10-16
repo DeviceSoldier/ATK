@@ -10,6 +10,8 @@ TagManager:
   - Stop
   - PlayerBullet
   - NavigationLine
+  - Impact
+  - Leftarm
   layers:
   - Default
   - TransparentFX
