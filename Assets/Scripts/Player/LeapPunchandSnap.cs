@@ -15,7 +15,6 @@ public class LeapPunchandSnap : MonoBehaviour
     void Start()
     {
         prevPosition = transform.position;
-        
     }
 
     // Update is called once per frame
@@ -23,13 +22,9 @@ public class LeapPunchandSnap : MonoBehaviour
     {
         if (Mathf.Approximately(Time.deltaTime, 0))
             return;
-        // ���݈ʒu�擾
         var position = transform.position;
-        // ���ݑ��x�擾
         velocity = (position - prevPosition) / Time.deltaTime;
-        // �O�t���[���ʒu���X�V
         prevPosition = position;
-        // ���ݑ��x���O�o��
         print($"velocity = {velocity.magnitude}");
     }
     private void OnCollisionEnter(Collision collision)
@@ -40,22 +35,17 @@ public class LeapPunchandSnap : MonoBehaviour
             {
                 Destroy(collision.gameObject);
             }
-            
         }
 
         if(collision.gameObject.tag == "Bullet")
         {
-            //�G�̍��W��ϐ�pos�ɕۑ�
-            var pos = this.gameObject.transform.position;
-            //�e�̃v���n�u���쐬
-            var t = Instantiate(Bullet) as GameObject;
-            //�e�̃v���n�u�̈ʒu��G�̈ʒu�ɂ���
-            t.transform.position = pos;
-            //�G����v���C���[�Ɍ������x�N�g��������
-            //�v���C���[�̈ʒu����G�̈ʒu�i�e�̈ʒu�j������
-            Vector3 vec = Enemy.transform.position - pos;
-            //�e��RigidBody2D�R���|�l���g��velocity�ɐ�����߂��x�N�g�������ė͂�������
-            
+            if (velocity.magnitude >= hitcount)
+            {
+                var pos = this.gameObject.transform.position;
+                var t = Instantiate(Bullet) as GameObject;
+                t.transform.position = pos;
+                Vector3 vec = Enemy.transform.position - pos;
+            }
         }
     }
 }
