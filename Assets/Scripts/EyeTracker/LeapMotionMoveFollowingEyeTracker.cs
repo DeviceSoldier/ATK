@@ -45,7 +45,7 @@ public class LeapMotionMoveFollowingEyeTracker : MonoBehaviour
 
 	private DateTime _lastAimatGazeTime = DateTime.Now;
 
-	
+
 
 	//-------------------------------------------------------------------------
 	// Public properties
@@ -206,7 +206,7 @@ public class LeapMotionMoveFollowingEyeTracker : MonoBehaviour
 			transformToRotate.Rotate(up, Yaw * fovScalar, Space.World);
 		}
 
-		HandParentTransform.position = transformToRotate.rotation * (new Vector3(0f, 0f, 1f) * Radius);
+		//HandParentTransform.position = transformToRotate.rotation * (new Vector3(0f, 0f, 1f) * Radius) + GameObject.Find("PlayerOBJ").transform.position;
 		HandParentTransform.rotation = transformToRotate.rotation;
 
 		//HandParentTransform.rotation = transformToRotate.rotation;
