@@ -1,8 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Reflection;
-using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Nissensai2022.Runtime;
 using UnityEngine;
@@ -22,7 +19,7 @@ namespace Nissensai2022.Internal
 
     internal class SystemStatusManager : MonoBehaviour
     {
-        internal static SystemStatusManager Instance;
+        internal static SystemStatusManager Instance = null;
 
         [Header("基本設定")] [Space(10)] [SerializeField]
         private LogLevel logLevel = LogLevel.Debug;
@@ -40,6 +37,7 @@ namespace Nissensai2022.Internal
         [SerializeField] private bool useSSL = true;
         [SerializeField] private float waitTime = 1f;
         [SerializeField] private int retryTime = 3;
+        [SerializeField] internal int timeout = 5;
 
         [Space(50)] [Header("ここからは触っちゃダメ！")] [Space(10)] [SerializeField]
         internal GameObject panel;
@@ -106,7 +104,6 @@ namespace Nissensai2022.Internal
                 Instance = this;
                 DontDestroyOnLoad(gameObject);
             }
-
             Logger.Level = logLevel;
             BaseUrl = useSSL ? "https://" : "http://";
             BaseUrl += server;
@@ -158,6 +155,7 @@ namespace Nissensai2022.Internal
                       $"?gameToken={GameToken}" +
                       $"&playerId={playerId}";
             var request = UnityWebRequest.Get(url);
+            request.timeout = SystemStatusManager.Instance.timeout;
             yield return request.SendWebRequest();
             if (request.result != UnityWebRequest.Result.Success)
             {
@@ -207,6 +205,7 @@ namespace Nissensai2022.Internal
             {
                 tryTime++;
                 var request = UnityWebRequest.Get($"{BaseUrl}/api/game/token?password={Instance.password}");
+                request.timeout = Instance.timeout;
                 yield return request.SendWebRequest();
                 if (request.result != UnityWebRequest.Result.Success)
                 {
@@ -239,6 +238,7 @@ namespace Nissensai2022.Internal
             var request =
                 UnityWebRequest.Get(
                     $"{SystemStatusManager.BaseUrl}/api/game/status?gameToken={SystemStatusManager.GameToken}");
+            request.timeout = Instance.timeout;
             yield return request.SendWebRequest();
             if (request.result != UnityWebRequest.Result.Success)
             {

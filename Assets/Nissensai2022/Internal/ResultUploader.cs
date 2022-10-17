@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using Nissensai2022.Runtime;
 using UnityEngine;
@@ -68,6 +67,7 @@ namespace Nissensai2022.Internal
                     $"&playerId={playerId}" +
                     $"&rank={(int)rank}";
                 var request = UnityWebRequest.Get(url);
+                request.timeout = SystemStatusManager.Instance.timeout;
                 yield return request.SendWebRequest();
                 if (request.result != UnityWebRequest.Result.Success)
                 {

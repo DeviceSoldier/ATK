@@ -1,10 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using Nissensai2022.Internal;
-using UnityEngine;
+using PlasticPipe.PlasticProtocol.Messages;
 using UnityEngine.Networking;
-using Logger = Nissensai2022.Runtime.Logger;
 
 namespace Nissensai2022.Runtime
 {
@@ -46,6 +44,11 @@ namespace Nissensai2022.Runtime
         public int Avd { get; private set; } = 0;
 
         /// <summary>
+        /// 戦闘方針
+        /// </summary>
+        public int Cmd { get; private set; } = 3;
+
+        /// <summary>
         /// データ更新完了したらTrue。Falseだと値を使っちゃダメ！
         /// </summary>
         public bool IsReady { get; private set; } = false;
@@ -62,6 +65,24 @@ namespace Nissensai2022.Runtime
         {
             Id = playerId;
             SystemStatusManager.RunTask(UpdatePlayerInfo());
+        }
+
+        public string Print()
+        {
+            return $"{Name}({Id}) atk:{Atk} def:{Def} spd:{Spd} vit:{Vit} avd:{Avd} cmd:{Cmd}";
+        }
+
+        public Player(int id, string name, int atk, int def, int spd, int vit, int avd,int cmd)
+        {
+            Id = id;
+            Name = name;
+            Atk = atk;
+            Def = def;
+            Spd = spd;
+            Vit = vit;
+            Avd = avd;
+            Cmd = cmd;
+            IsReady = true;
         }
 
         /// <summary>
@@ -82,6 +103,7 @@ namespace Nissensai2022.Runtime
             {
                 var request =
                     UnityWebRequest.Get($"{SystemStatusManager.BaseUrl}/api/player/status?playerId={playerId}");
+                request.timeout = SystemStatusManager.Instance.timeout;
                 yield return request.SendWebRequest();
                 if (request.result != UnityWebRequest.Result.Success)
                 {
