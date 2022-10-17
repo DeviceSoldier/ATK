@@ -15,8 +15,8 @@ public class ImpactScale : MonoBehaviour
     {
         target.transform.localScale += speed * Time.deltaTime;
 
-        if (target.transform.localScale.x > 10 && target.transform.localScale.y > 10 &&
-            target.transform.localScale.z > 10)
+        if (target.transform.localScale.x > 50 && target.transform.localScale.y > 50 &&
+            target.transform.localScale.z > 50)
         {
             Destroy(this.gameObject);
         }

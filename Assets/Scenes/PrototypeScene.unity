@@ -1277,7 +1277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8257087386648468677, guid: 1d338fed0ed7df84a86c220153fbcc35, type: 3}
       propertyPath: m_TagString
-      value: Guard
+      value: Leftarm
       objectReference: {fileID: 0}
     - target: {fileID: 8257087386648690817, guid: 1d338fed0ed7df84a86c220153fbcc35, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10316,7 +10316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 742416830}
   Bullet: {fileID: 4633477985480247552, guid: 1add5a28362d00849a483265d6682739, type: 3}
-  hitcount: 0.75
+  hitcount: 0.65
 --- !u!65 &966519717
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10360,7 +10360,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ImpactPosition: {fileID: 471708988}
   Impact: {fileID: 5597595108669982089, guid: 06288c45b6f42504eb9132a70d9af4a3, type: 3}
-  hitcount: 0.75
+  hitcount: 0.1
 --- !u!1001 &970406627
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12059,7 +12059,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 742416830}
   Bullet: {fileID: 4633477985480247552, guid: 1add5a28362d00849a483265d6682739, type: 3}
-  hitcount: 0.75
+  hitcount: 0.65
 --- !u!65 &1176275025
 BoxCollider:
   m_ObjectHideFlags: 0
