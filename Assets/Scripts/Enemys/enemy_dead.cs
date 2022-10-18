@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class enemy_dead : MonoBehaviour
 {
-    void OnTriggerEnter(Collider col)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (col.CompareTag("Player"))
+        if(collision.gameObject.tag == "Guard")
         {
-           Destroy(this.gameObject);
+            Destroy(this.gameObject);
+        }
+
+        if (collision.gameObject.tag == "Player")
+        {
+            Destroy(this.gameObject);
         }
     }
 }
