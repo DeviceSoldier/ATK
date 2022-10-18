@@ -68,6 +68,7 @@ namespace Nissensai2022.Internal
                     $"&rank={(int)rank}";
                 var request = UnityWebRequest.Get(url);
                 request.timeout = SystemStatusManager.Instance.timeout;
+                Loadding.LoaddingManager.Show();
                 yield return request.SendWebRequest();
                 if (request.result != UnityWebRequest.Result.Success)
                 {
@@ -87,6 +88,7 @@ namespace Nissensai2022.Internal
                 SystemStatusManager.Status = SystemStatus.Idle;
             } while (!isOk && retryCount < SystemStatusManager.RetryTime);
 
+            Loadding.LoaddingManager.Hide();
             if (!isOk)
             {
                 Logger.Error($"Failed to send play result({(int)rank}) for player({playerId})");

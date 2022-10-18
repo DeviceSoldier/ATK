@@ -156,12 +156,14 @@ namespace Nissensai2022.Internal
                       $"&playerId={playerId}";
             var request = UnityWebRequest.Get(url);
             request.timeout = SystemStatusManager.Instance.timeout;
+            Loadding.LoaddingManager.Show();
             yield return request.SendWebRequest();
             if (request.result != UnityWebRequest.Result.Success)
             {
                 Logger.Warn(request.error);
                 playerIdInput.enabled = true;
                 playerIdInput.ActivateInputField();
+                Loadding.LoaddingManager.Hide();
                 yield break;
             }
 
@@ -171,12 +173,14 @@ namespace Nissensai2022.Internal
                 Logger.Warn(result["msg"].Value<string>());
                 playerIdInput.enabled = true;
                 playerIdInput.ActivateInputField();
+                Loadding.LoaddingManager.Hide();
                 yield break;
             }
 
             playerIdInput.text = "";
             playerIdInput.enabled = true;
             playerIdInput.ActivateInputField();
+            Loadding.LoaddingManager.Hide();
         }
 
         internal static void ShowQrCode()
@@ -206,6 +210,7 @@ namespace Nissensai2022.Internal
                 tryTime++;
                 var request = UnityWebRequest.Get($"{BaseUrl}/api/game/token?password={Instance.password}");
                 request.timeout = Instance.timeout;
+                Loadding.LoaddingManager.Show();
                 yield return request.SendWebRequest();
                 if (request.result != UnityWebRequest.Result.Success)
                 {
@@ -226,6 +231,7 @@ namespace Nissensai2022.Internal
                 Instance.qrCodeImage.sprite = QRCodeUtil.CreateSprite($"{BaseUrl}/start?gameToken={GameToken}");
             } while (!_isGameTokenReady && tryTime < RetryTime);
 
+            Loadding.LoaddingManager.Hide();
             if (!_isGameTokenReady)
             {
                 Logger.Error("Failed to fetch new token.");
@@ -239,10 +245,12 @@ namespace Nissensai2022.Internal
                 UnityWebRequest.Get(
                     $"{SystemStatusManager.BaseUrl}/api/game/status?gameToken={SystemStatusManager.GameToken}");
             request.timeout = Instance.timeout;
+            Loadding.LoaddingManager.Show();
             yield return request.SendWebRequest();
             if (request.result != UnityWebRequest.Result.Success)
             {
                 Logger.Warn(request.error);
+                Loadding.LoaddingManager.Hide();
                 yield break;
             }
 
@@ -250,6 +258,7 @@ namespace Nissensai2022.Internal
             if (result["state"].Value<string>() != "ok")
             {
                 Logger.Warn(result["msg"].Value<string>());
+                Loadding.LoaddingManager.Hide();
                 yield break;
             }
 
@@ -261,6 +270,7 @@ namespace Nissensai2022.Internal
             {
                 Status = (SystemStatus)result["status"].Value<int>();
             }
+            Loadding.LoaddingManager.Hide();
         }
 
         private IEnumerator MainLoop()

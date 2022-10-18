@@ -1,6 +1,7 @@
 using System.Collections;
 using Newtonsoft.Json.Linq;
 using Nissensai2022.Internal;
+using PlasticPipe.PlasticProtocol.Messages;
 using UnityEngine.Networking;
 
 namespace Nissensai2022.Runtime
@@ -103,6 +104,7 @@ namespace Nissensai2022.Runtime
                 var request =
                     UnityWebRequest.Get($"{SystemStatusManager.BaseUrl}/api/player/status?playerId={playerId}");
                 request.timeout = SystemStatusManager.Instance.timeout;
+                Loadding.LoaddingManager.Show();
                 yield return request.SendWebRequest();
                 if (request.result != UnityWebRequest.Result.Success)
                 {
@@ -128,6 +130,7 @@ namespace Nissensai2022.Runtime
                     Logger.Log($"Player({Name}): {Atk}, {Def}, {Spd}, {Vit}, {Avd}");
             } while (!IsReady && retryCount < SystemStatusManager.RetryTime);
 
+            Loadding.LoaddingManager.Hide();
             if (!IsReady)
             {
                 Logger.Error($"Failed to get player({playerId}) info");

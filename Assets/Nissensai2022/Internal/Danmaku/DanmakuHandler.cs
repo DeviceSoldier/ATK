@@ -17,6 +17,7 @@ namespace Nissensai2022.Danmaku
         [SerializeField] internal Color backgroundColor;
 
         [Header("弾幕設定")] [SerializeField] internal float speed = 200f;
+        [SerializeField] internal bool debugMode = false;
 
         [Space(50)] [Header("サーバー通信設定")] [Space(10)] [SerializeField]
         internal string password = "********************************";

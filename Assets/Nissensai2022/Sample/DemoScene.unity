@@ -918,53 +918,13 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4083104523032391492, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083104523032391493, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083104523032391493, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083104523032391493, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083104523579276212, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4083104523579276212, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 87500
+      value: 92600
       objectReference: {fileID: 0}
     - target: {fileID: 6215391168588047137, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
       propertyPath: m_Name
       value: SystemStatusManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 6215391168588047138, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
-      propertyPath: password
-      value: 722C6680F93546F1AD5D228B1BAB2D75
-      objectReference: {fileID: 0}
-    - target: {fileID: 6215391168588047138, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
-      propertyPath: gameStopCallback.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6215391168588047138, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
-      propertyPath: gameStartCallback.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6215391168588047138, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
-      propertyPath: gameStopCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6215391168588047138, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
-      propertyPath: gameStartCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6215391168588047138, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
       propertyPath: gameStopCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -974,38 +934,6 @@ PrefabInstance:
       propertyPath: gameStartCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 812179121}
-    - target: {fileID: 6215391168588047138, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
-      propertyPath: gameStopCallback.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6215391168588047138, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
-      propertyPath: gameStartCallback.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6215391168588047138, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
-      propertyPath: gameStopCallback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnGameStop
-      objectReference: {fileID: 0}
-    - target: {fileID: 6215391168588047138, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
-      propertyPath: gameStartCallback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnGameStart
-      objectReference: {fileID: 0}
-    - target: {fileID: 6215391168588047138, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
-      propertyPath: gameStopCallback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Nissensai2022.Sample.GameManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6215391168588047138, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
-      propertyPath: gameStartCallback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Nissensai2022.Sample.GameManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6215391168588047138, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
-      propertyPath: gameStopCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6215391168588047138, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
-      propertyPath: gameStartCallback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 6215391168588047139, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1049,10 +977,6 @@ PrefabInstance:
     - target: {fileID: 6215391168588047139, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6215391168795463917, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
-      propertyPath: m_SortingOrder
-      value: 32765
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
