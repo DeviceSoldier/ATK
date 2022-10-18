@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PhaseManager : MonoBehaviour
 {
-	private StateMachine<GamePhase> _stateMachine = new StateMachine<GamePhase>();
+	public StateMachine<GamePhase> StateMachine { get; private set; } = new StateMachine<GamePhase>();
 	[SerializeField] public float phaseATime = 20f;
 	[SerializeField] public float phaseBTime = 20f;
 	[SerializeField] public float phaseCTime = 20f;
@@ -18,7 +18,7 @@ public class PhaseManager : MonoBehaviour
 		_player = FindObjectOfType<PhaseA_TargetLook>().gameObject;
 		_dragon = FindObjectOfType<Doragon_Move_A_Test>().gameObject;
 
-		_stateMachine.AddNode(GamePhase.A, () => { }, () =>
+		StateMachine.AddNode(GamePhase.A, () => { }, () =>
 		{
 			Debug.Log("Enter phase A");
 			Timeline.RestartTimer();
@@ -30,7 +30,7 @@ public class PhaseManager : MonoBehaviour
 			FindObjectOfType<PhaseA_TargetLook>().enabled = false;
 		});
 
-		_stateMachine.AddNode(GamePhase.B, () => { }, () =>
+		StateMachine.AddNode(GamePhase.B, () => { }, () =>
 		{
 			Debug.Log("Enter phase B");
 			Timeline.ResetTimer();
@@ -44,7 +44,7 @@ public class PhaseManager : MonoBehaviour
 			_dragon.GetComponent<BossBPosition>().enabled = false;
 		});
 
-		_stateMachine.AddNode(GamePhase.C, () => { }, () =>
+		StateMachine.AddNode(GamePhase.C, () => { }, () =>
 		{
 			Debug.Log("Enter phase C");
 			Timeline.ResetTimer();
@@ -56,7 +56,7 @@ public class PhaseManager : MonoBehaviour
 			_player.GetComponent<PlayerMove_1005>().enabled = false;
 		});
 
-		_stateMachine.AddNode(GamePhase.Result, () => { }, () =>
+		StateMachine.AddNode(GamePhase.Result, () => { }, () =>
 		{
 			Debug.Log("Enter phase Result");
 			Timeline.StopTimer();
@@ -67,15 +67,15 @@ public class PhaseManager : MonoBehaviour
 
 		});
 
-		_stateMachine.AddEdge(GamePhase.A, GamePhase.B, () => Timeline.CurrentTime > phaseATime);
-		_stateMachine.AddEdge(GamePhase.B, GamePhase.C, () => Timeline.CurrentTime > phaseBTime);
-		_stateMachine.AddEdge(GamePhase.C, GamePhase.Result, () => Timeline.CurrentTime > phaseCTime);
+		StateMachine.AddEdge(GamePhase.A, GamePhase.B, () => Timeline.CurrentTime > phaseATime);
+		StateMachine.AddEdge(GamePhase.B, GamePhase.C, () => Timeline.CurrentTime > phaseBTime);
+		StateMachine.AddEdge(GamePhase.C, GamePhase.Result, () => Timeline.CurrentTime > phaseCTime);
 
-		_stateMachine.SetEntry(GamePhase.A);
+		StateMachine.SetEntry(GamePhase.A);
 	}
 
 	private void Update()
 	{
-		_stateMachine.Update();
+		StateMachine.Update();
 	}
 }
