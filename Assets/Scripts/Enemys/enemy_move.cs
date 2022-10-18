@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -58,6 +59,14 @@ public class enemy_move : MonoBehaviour
         if (col.CompareTag("Player"))
         {
             delete = true;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Impact")&&!Mathf.Approximately(speed,0f))
+        {
+            speed = 0f;
         }
     }
 }
