@@ -42,6 +42,7 @@ public class PhaseManager : MonoBehaviour
 			Debug.Log("Leave phase B");
 			_player.GetComponent<PhaseA_PhaseB>().enabled = false;
 			_dragon.GetComponent<BossBPosition>().enabled = false;
+			_player.GetComponent<PlayerMove_1005>().enabled = false;
 		});
 
 		StateMachine.AddNode(GamePhase.C, () => { }, () =>
