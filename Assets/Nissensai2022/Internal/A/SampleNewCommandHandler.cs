@@ -5,7 +5,7 @@ using UnityEngine;
 
 internal class SampleNewCommandHandler : MonoBehaviour
 {
-    internal void NewCommandHandler(Command command)
+    public void NewCommandHandler(Command command)
     {
         Nissensai2022.Runtime.Logger.Log($"New command event {command.PlayerId} {command.Cmd}");
     }

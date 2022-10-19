@@ -10,14 +10,24 @@ using UnityEngine;
 public class PlayerMove_1005 : MonoBehaviour
 {
     public  float WalkSpeed;
+    [SerializeField] private Transform phaseBStartPoint;
+    [SerializeField] private Transform phaseCStartPoint;
+    private float _t;
+    private float _duration;
+    
     void Start()
     {
-        
+        _duration = FindObjectOfType<PhaseManager>().phaseBTime;
+        _t = 0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += new Vector3(0, 0, WalkSpeed)*Time.deltaTime;
+        if (_t >= _duration)
+            return;
+        _t += Time.deltaTime;
+        transform.position = Vector3.Lerp(phaseBStartPoint.position, phaseCStartPoint.position, _t / _duration);
+        //transform.position += new Vector3(0, 0, WalkSpeed)*Time.deltaTime;
     }
 }

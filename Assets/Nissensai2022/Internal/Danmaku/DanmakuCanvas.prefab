@@ -120,7 +120,9 @@ MonoBehaviour:
   fontColor: {r: 1, g: 1, b: 1, a: 1}
   backgroundColor: {r: 0, g: 0, b: 0, a: 0}
   speed: 200
+  debugMode: 0
   password: FF74DEECC6944C3980B6CCEE70B38E93
   server: nissensai.games
   useSSL: 1
   retryTime: 3
+  timeout: 5
