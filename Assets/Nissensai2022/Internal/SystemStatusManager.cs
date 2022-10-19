@@ -104,6 +104,7 @@ namespace Nissensai2022.Internal
                 Instance = this;
                 DontDestroyOnLoad(gameObject);
             }
+
             Logger.Level = logLevel;
             BaseUrl = useSSL ? "https://" : "http://";
             BaseUrl += server;
@@ -245,12 +246,12 @@ namespace Nissensai2022.Internal
                 UnityWebRequest.Get(
                     $"{SystemStatusManager.BaseUrl}/api/game/status?gameToken={SystemStatusManager.GameToken}");
             request.timeout = Instance.timeout;
-            Loadding.LoaddingManager.Show();
+            //Loadding.LoaddingManager.Show();//
             yield return request.SendWebRequest();
             if (request.result != UnityWebRequest.Result.Success)
             {
                 Logger.Warn(request.error);
-                Loadding.LoaddingManager.Hide();
+                //Loadding.LoaddingManager.Hide();
                 yield break;
             }
 
@@ -258,9 +259,14 @@ namespace Nissensai2022.Internal
             if (result["state"].Value<string>() != "ok")
             {
                 Logger.Warn(result["msg"].Value<string>());
-                Loadding.LoaddingManager.Hide();
+                //Loadding.LoaddingManager.Hide();
                 yield break;
             }
+
+            SystemStatus status = (SystemStatus)result["status"].Value<int>();
+
+            if (status == SystemStatus.Idle && Status == status)
+                yield break;
 
             int playerId = result["playerId"].Value<int>();
             CurrentPlayer = new Player();
@@ -268,9 +274,9 @@ namespace Nissensai2022.Internal
 
             if (CurrentPlayer.IsReady)
             {
-                Status = (SystemStatus)result["status"].Value<int>();
+                Status = status;
             }
-            Loadding.LoaddingManager.Hide();
+            //Loadding.LoaddingManager.Hide();
         }
 
         private IEnumerator MainLoop()

@@ -19803,7 +19803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3563f59b79b3532449c3b2f3ffcd16e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phaseATime: 2
+  phaseATime: 20
   phaseBTime: 20
   phaseCTime: 20
 --- !u!4 &1945914581

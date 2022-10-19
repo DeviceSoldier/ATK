@@ -73,7 +73,7 @@ namespace Nissensai2022.A
                 var request =
                     UnityWebRequest.Get($"{CommandHandler.BaseUrl}/api/player/commandlist?after={_currentPointer}");
                 request.timeout = CommandHandler.Instance.timeout;
-                Loadding.LoaddingManager.Show();
+                //Loadding.LoaddingManager.Show();//
                 yield return request.SendWebRequest();
                 if (request.result != UnityWebRequest.Result.Success)
                 {
@@ -102,7 +102,7 @@ namespace Nissensai2022.A
                 }
             } while (!success && tryTime < CommandHandler.Instance.retryTime);
 
-            Loadding.LoaddingManager.Hide();
+            //Loadding.LoaddingManager.Hide();
             if (!success)
             {
                 Logger.Error("Failed to fetch command list.");

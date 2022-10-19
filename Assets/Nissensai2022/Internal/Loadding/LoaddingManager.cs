@@ -14,16 +14,19 @@ namespace Nissensai2022.Loadding
         private static Image _image;
         private static bool _enable;
         private static float _timer;
+        private static int _taskCount = 0;
 
         public static void Show()
         {
-            _timer = 0f;
             _enable = true;
             _image.enabled = true;
+            _taskCount++;
         }
 
         public static void Hide()
         {
+            _taskCount--;
+            Instance.StopAllCoroutines();
             Instance.StartCoroutine(DelayHide());
         }
 
@@ -31,7 +34,11 @@ namespace Nissensai2022.Loadding
         {
             float waitTime = Instance.minTime - _timer;
             if (waitTime > 0)
-                yield return new WaitForSeconds(waitTime);
+                yield return new WaitUntil(() => _taskCount == 0 && _timer >= waitTime);
+            else
+                yield return new WaitUntil(() => _taskCount == 0);
+
+            _timer = 0f;
             _enable = false;
             _image.enabled = false;
             //_image.transform.rotation = Quaternion.identity;
@@ -51,7 +58,9 @@ namespace Nissensai2022.Loadding
             }
 
             _image = GetComponentInChildren<Image>();
-            Hide();
+            _enable = false;
+            _image.enabled = false;
+            _timer = 0f;
         }
 
         private void Update()
