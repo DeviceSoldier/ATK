@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(BossHP))]
 public class BossHit : MonoBehaviour
 {
     private BossHP _bossHp;
@@ -11,7 +10,7 @@ public class BossHit : MonoBehaviour
 
     private void Start()
     {
-        _bossHp = gameObject.GetComponent<BossHP>();
+        _bossHp = FindObjectOfType<BossHP>();
     }
 
     private void OnCollisionEnter(Collision collision)

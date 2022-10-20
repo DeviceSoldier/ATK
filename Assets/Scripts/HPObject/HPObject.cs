@@ -6,8 +6,11 @@ using UnityEngine;
 public abstract class HPObject : MonoBehaviour
 {
     [SerializeField] protected float maxHp;
-    public float hp { get; private set; }
     [SerializeField] protected bool godMode;
+
+    private Gage _gage = new Gage();
+    public float Hp => _gage.Value;
+    public float MaxHp => _gage.MaxValue;
 
     protected abstract void OnHpZero();
 
@@ -15,12 +18,12 @@ public abstract class HPObject : MonoBehaviour
     {
         if (godMode)
             return;
-        
-        hp -= damage;
-        if (hp > 0)
+
+        _gage.Add(-damage);
+        if (Hp > 0)
             return;
         
-        hp = 0;
+        _gage.SetValue(0);
         OnHpZero();
     }
 
@@ -31,6 +34,8 @@ public abstract class HPObject : MonoBehaviour
 
     protected virtual void Awake()
     {
-        hp = maxHp;
+        _gage.SetMax(maxHp);
+        _gage.SetMin(0);
+        _gage.SetValue(maxHp);
     }
 }

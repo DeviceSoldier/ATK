@@ -18,7 +18,7 @@ public class DebugBossHPDisplay : MonoBehaviour
 
     private void OnGUI()
     {
-        GUI.Label(rect, ((int)_hpObject.hp).ToString(), style);
+        GUI.Label(rect, ((int)_hpObject.Hp).ToString(), style);
     }
 }
 #endif
