@@ -84,6 +84,7 @@ namespace Nissensai2022.Internal
                     RunTask(GetNewGameToken());
                     if (!Instance.qrCodeDisplayManually)
                         Nissensai.ShowQrCode();
+                    Instance.playerIdInput.ActivateInputField();
                 }
 
                 _status = value;
@@ -111,7 +112,18 @@ namespace Nissensai2022.Internal
             Logger.Log($"Base Url: {BaseUrl}");
             Status = SystemStatus.Idle;
             _qrCodeAnm = panel.GetComponent<Animation>();
-            playerIdInput.onSubmit.AddListener((value) => { StartCoroutine(SendStart(Int32.Parse(value))); });
+            playerIdInput.onSubmit.AddListener((value) =>
+            {
+                try
+                {
+                    StartCoroutine(SendStart(Int32.Parse(value)));
+                }
+                catch (Exception e)
+                {
+                    playerIdInput.ActivateInputField();
+                    Logger.Warn(e.Message);
+                }
+            });
             Nissensai.AddConsoleMethod("GetNewToken", GetNewToken);
             Nissensai.AddConsoleMethod("SendResult", ResultUploader.SendResult);
             Nissensai.AddConsoleMethod("ReloadPlayerInfo", ReloadPlayerInfo);
@@ -180,7 +192,6 @@ namespace Nissensai2022.Internal
 
             playerIdInput.text = "";
             playerIdInput.enabled = true;
-            playerIdInput.ActivateInputField();
             Loadding.LoaddingManager.Hide();
         }
 
