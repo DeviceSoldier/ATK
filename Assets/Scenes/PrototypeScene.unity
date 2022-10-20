@@ -13260,6 +13260,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1168415617}
+  - component: {fileID: 1168415618}
   m_Layer: 0
   m_Name: DebugResultRankDisplay
   m_TagString: Untagged
@@ -13281,6 +13282,18 @@ Transform:
   m_Father: {fileID: 1654469148}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1168415618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168415616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7effd8852810847a5c4b294467dce8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1169853737
 GameObject:
   m_ObjectHideFlags: 0
@@ -20392,7 +20405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bae69c58ea925d94ca7b0fd7975014da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 50
+  maxHp: 100
   godMode: 0
   deleteobj: {fileID: 709207668}
 --- !u!4 &2046207502
