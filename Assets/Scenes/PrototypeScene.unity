@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.12949482, g: 0.2764088, b: 0.40601677, a: 1}
+  m_IndirectSpecularColor: {r: 0.12948734, g: 0.27640095, b: 0.40601087, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8323,6 +8323,7 @@ GameObject:
   - component: {fileID: 709207671}
   - component: {fileID: 709207673}
   - component: {fileID: 709207674}
+  - component: {fileID: 709207672}
   m_Layer: 0
   m_Name: DoragonRoot
   m_TagString: Untagged
@@ -8371,6 +8372,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitdamage: 0
+--- !u!114 &709207672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709207668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae69c58ea925d94ca7b0fd7975014da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 0
+  godMode: 0
+  deleteobj: {fileID: 0}
 --- !u!114 &709207673
 MonoBehaviour:
   m_ObjectHideFlags: 0
