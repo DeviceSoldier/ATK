@@ -14,9 +14,9 @@ public class LeapMotionMoveFollowingEyeTracker : MonoBehaviour
 	public TobiiExtendedViewSettings ExtendedViewSettings;
 
 	/* Control how how Extended View angles collapse/expand when entering/leaving aim mode */
-	public bool CollapseWhenAiming = true;
-	public float AimAtGazeCollapseSpeed = 5;
-	public float AimAtGazeExpandTime = 5;
+	//public bool CollapseWhenAiming = true;
+	//public float AimAtGazeCollapseSpeed = 5;
+	//public float AimAtGazeExpandTime = 5;
 
 	public Vector3 OriginPoint = Vector3.zero;
 	public float Radius = 1f;
@@ -24,7 +24,7 @@ public class LeapMotionMoveFollowingEyeTracker : MonoBehaviour
 	public Transform HandParentTransform;
 	public Camera _usedCamera;
 
-	public bool IsAiming { get; set; }
+	//public bool IsAiming { get; set; }
 
 	public float Yaw { get; private set; }
 
@@ -122,7 +122,7 @@ public class LeapMotionMoveFollowingEyeTracker : MonoBehaviour
 		// Fetch Yaw & Pitch from API
 		var extendedViewAngles = TobiiAPI.GetExtendeViewAngles();
 
-		if (IsAiming && CollapseWhenAiming)
+		/*if (IsAiming && CollapseWhenAiming)
 		{
 			// while entering aim mode, collapse Extended View angles to zero
 			var lerpStep = Time.unscaledDeltaTime * AimAtGazeCollapseSpeed;
@@ -138,13 +138,13 @@ public class LeapMotionMoveFollowingEyeTracker : MonoBehaviour
 
 			_extendedViewYaw = Mathf.Lerp(_extendedViewYaw, extendedViewAngles.Yaw, lerpStep);
 			_extendedViewPitch = Mathf.Lerp(_extendedViewPitch, extendedViewAngles.Pitch, lerpStep);
-		}
-		else
-		{
+		}*/
+		/*else
+		{*/
 			// or else use Extended View angles unmodified
 			_extendedViewYaw = extendedViewAngles.Yaw;
 			_extendedViewPitch = extendedViewAngles.Pitch;
-		}
+		//}
 
 		Yaw = _extendedViewYaw;
 		Pitch = _extendedViewPitch;
