@@ -8,7 +8,7 @@ namespace CartoonHeroes
    
     [CustomEditor(typeof(SetCharacter))]
     [CanEditMultipleObjects]
-    public class SetCharacterEditor : Editor
+    public class SetCharacterEditor02 : Editor
     {
         const int defaultSpace = 8;
         

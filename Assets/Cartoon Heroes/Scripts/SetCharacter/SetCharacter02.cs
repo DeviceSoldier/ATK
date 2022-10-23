@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace CartoonHeroes
 {
-    public class SetCharacter : MonoBehaviour
+    public class SetCharacter02 : MonoBehaviour
     {
         
         public Transform characterRoot;
