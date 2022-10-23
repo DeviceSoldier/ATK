@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class csShowAllEffect : MonoBehaviour
+public class csShowAllEffect01 : MonoBehaviour
 {
     public string[] EffectNames;
     public string[] Effect2Names;
