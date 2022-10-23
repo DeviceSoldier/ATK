@@ -5,7 +5,7 @@ public class csMouseOrbit : MonoBehaviour
 {
 
     public Transform Target;
-    public float distance;
+    float distance;
 
     public float xSpeed = 250.0f;
     public float ySpeed = 120.0f;
@@ -15,7 +15,7 @@ public class csMouseOrbit : MonoBehaviour
 
     private float x = 0.0f;
     private float y = 0.0f;
-    public float CameraDist = 10;
+    public float CameraDist;
 
     // Use this for initialization
     void Start()
@@ -23,7 +23,7 @@ public class csMouseOrbit : MonoBehaviour
         Vector3 angles = transform.eulerAngles;
         x = angles.x;
         y = angles.y;
-        distance = 30;
+        distance = 80;
 
         if (this.GetComponent<Rigidbody>() == true)
             GetComponent<Rigidbody>().freezeRotation = true;
