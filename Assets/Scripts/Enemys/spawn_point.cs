@@ -35,7 +35,7 @@ public class spawn_point : MonoBehaviour
             }
         }
 
-        if (delete >= 39)
+        if (delete >= 35)
         {
             Destroy(this.gameObject);
         }
