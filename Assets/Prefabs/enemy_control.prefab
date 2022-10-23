@@ -799,6 +799,7 @@ GameObject:
   - component: {fileID: 8664449661974265879}
   - component: {fileID: 8750143754181935889}
   - component: {fileID: 8750143754181935888}
+  - component: {fileID: 7592247447355616377}
   m_Layer: 0
   m_Name: Spider_Flower
   m_TagString: Enemy
@@ -866,6 +867,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05dce7feadde516469e94a5024b4b2af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deadtime: 0
+--- !u!114 &7592247447355616377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8750143754181935891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faf63a77705ea5646b16afa0a90c39f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubeA: {fileID: 8750143754181935891}
+  jumpPoint: 20
 --- !u!1 &8750144434595533081
 GameObject:
   m_ObjectHideFlags: 0
