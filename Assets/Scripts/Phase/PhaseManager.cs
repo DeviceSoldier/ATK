@@ -55,11 +55,13 @@ public class PhaseManager : MonoBehaviour
         {
             Debug.Log("Enter phase C");
             Timeline.ResetTimer();
-            _dragon.GetComponent<BossCPosition>().enabled = true;
+            //_dragon.GetComponent<BossCPosition>().enabled = true;
+            _dragon.GetComponent<PhaseCController>().enabled = true;
         }, () =>
         {
             Debug.Log("Leave phase C");
-            _dragon.GetComponent<BossCPosition>().enabled = false;
+            //_dragon.GetComponent<BossCPosition>().enabled = false;
+            _dragon.GetComponent<PhaseCController>().enabled = false;
             _player.GetComponent<PlayerMove_1005>().enabled = false;
         });
 
