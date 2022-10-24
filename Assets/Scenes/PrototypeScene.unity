@@ -21981,7 +21981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phaseATime: 1
-  phaseBTime: 1
+  phaseBTime: 5
   phaseCTime: 20
 --- !u!4 &1945914581
 Transform:
