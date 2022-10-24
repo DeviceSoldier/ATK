@@ -195,19 +195,23 @@ public class LeapMotionMoveFollowingEyeTracker : MonoBehaviour
         var transformToRotate = componenetAsTransform != null ? componenetAsTransform : componentToRotate.transform;
 
         transformToRotate.Rotate(Pitch * fovScalar, 0.0f, 0.0f, Space.Self);
+        //HandParentTransform.Rotate(Pitch * fovScalar, 0.0f, 0.0f, Space.Self);
 
         if (up == new Vector3())
         {
             transformToRotate.Rotate(0.0f, Yaw * fovScalar, 0.0f, Space.World);
+            //HandParentTransform.Rotate(0.0f, Yaw * fovScalar, 0.0f, Space.World);
         }
         else
         {
             transformToRotate.Rotate(up, Yaw * fovScalar, Space.World);
+            //HandParentTransform.Rotate(up, Yaw * fovScalar, Space.World);
         }
 
-        var worldPos = transformToRotate.TransformPoint(Vector3.forward * Radius);
+        //var worldPos = transformToRotate.TransformPoint(Vector3.forward * Radius);
+        var worldPos = transformToRotate.rotation * (Vector3.forward * Radius);
         HandParentTransform.position = worldPos + GameObject.Find("PlayerOBJ").transform.position;
-        //HandParentTransform.rotation = transformToRotate.rotation;
+        HandParentTransform.rotation = transformToRotate.rotation;
 
         //HandParentTransform.rotation = transformToRotate.rotation;
     }
