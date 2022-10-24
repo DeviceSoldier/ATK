@@ -14,7 +14,7 @@ public class BulletMove : MonoBehaviour
     void Start()
     {
         target = GameObject.Find("PlayerOBJ");
-        dragon = GameObject.Find("DoragonRoot").transform;
+        dragon = GameObject.Find("BulletSpawnPoint").transform;
         controll = Random.Range(-100f, 100f);
     }
 

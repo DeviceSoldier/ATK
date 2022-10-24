@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,13 +30,7 @@ public class LeapPunchandSnap : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Enemy")
-        {
-            if (velocity.magnitude >= hitcount)
-            {
-                Destroy(collision.gameObject);
-            }
-        }
+        
 
         if(collision.gameObject.tag == "Bullet")
         {
@@ -45,6 +40,17 @@ public class LeapPunchandSnap : MonoBehaviour
                 var t = Instantiate(Bullet) as GameObject;
                 t.transform.position = pos;
                 Vector3 vec = Enemy.transform.position - pos;
+            }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (CompareTag("Enemy"))
+        {
+            if (velocity.magnitude >= hitcount)
+            {
+                Destroy(other.gameObject);
             }
         }
     }
