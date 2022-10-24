@@ -8,6 +8,6 @@ public class GameStopCallback : MonoBehaviour
 {
     public void OnGameStop()
     {
-        SceneManager.LoadScene("TitleScene");
+        SceneManager.LoadScene("OutGame");
     }
 }
