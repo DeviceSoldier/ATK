@@ -93,19 +93,22 @@ namespace Nissensai2022.Internal
 
         internal static string BaseUrl { get; private set; }
 
-        private IEnumerator Start()
+        private void Awake()
         {
             if (Instance != null)
             {
                 Destroy(gameObject);
-                yield break;
+                return;
             }
             else
             {
                 Instance = this;
                 DontDestroyOnLoad(gameObject);
             }
+        }
 
+        private IEnumerator Start()
+        {
             Logger.Level = logLevel;
             BaseUrl = useSSL ? "https://" : "http://";
             BaseUrl += server;

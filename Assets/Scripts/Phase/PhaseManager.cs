@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -29,6 +30,11 @@ public class PhaseManager : MonoBehaviour
             FindObjectOfType<Doragon_Attack_A_Test>().enabled = false;
             FindObjectOfType<PhaseA_TargetLook>().enabled = false;
         });
+        
+        StateMachine.AddNode(GamePhase.AtoBMovie,()=>{}, () =>
+        {
+            Timeline.ResetTimer();
+        }, () => { });
 
         StateMachine.AddNode(GamePhase.B, () => { }, () =>
         {
@@ -65,10 +71,12 @@ public class PhaseManager : MonoBehaviour
             ResultHandler.Process(bossHp.Hp, bossHp.MaxHp, FindObjectOfType<PlayerGage>().gage.Value);
 
             // todo real result process
-            Nissensai2022.Runtime.Nissensai.SendResult(ResultHandler.Rank);
+            FindObjectOfType<VideoChange>().ChangeVideo(ResultHandler.Rank);
+            
         }, () => { });
 
-        StateMachine.AddEdge(GamePhase.A, GamePhase.B, () => Timeline.CurrentTime > phaseATime);
+        StateMachine.AddEdge(GamePhase.A, GamePhase.AtoBMovie, () => Timeline.CurrentTime > phaseATime);
+        StateMachine.AddEdge(GamePhase.AtoBMovie, GamePhase.B, () => Timeline.CurrentTime > 0f);
         StateMachine.AddEdge(GamePhase.B, GamePhase.C, () => Timeline.CurrentTime > phaseBTime);
         StateMachine.AddEdge(GamePhase.C, GamePhase.Result, () => Timeline.CurrentTime > phaseCTime);
 
