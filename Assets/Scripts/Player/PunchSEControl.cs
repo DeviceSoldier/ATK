@@ -24,4 +24,12 @@ public class PunchSEControl : MonoBehaviour
             audio.PlayOneShot(SE2);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            
+        }
+    }
 }
