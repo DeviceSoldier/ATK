@@ -30,6 +30,7 @@ public class PhaseCController : MonoBehaviour
     private float _idleTime;
     private float _timer = 0f;
     private bool _isAnimationOver = false;
+    private float _heightOffset;
 
     public void AnimationOver()
     {
@@ -41,7 +42,7 @@ public class PhaseCController : MonoBehaviour
         float x = Mathf.Sin(theta);
         float y = Mathf.Cos(theta);
         Vector3 offset = new Vector3(x, 0f, y) * radius;
-        offset.y = heightOffset;
+        offset.y = _heightOffset;
         var newPos = _origin + _playerTransform.TransformVector(offset);
         transform.position = newPos;
     }
@@ -54,6 +55,7 @@ public class PhaseCController : MonoBehaviour
         _angleSpeed = speed / maxRadius; // rad
         _radius = maxRadius;
         _idleTime = Random.Range(idleTimeRange.x, idleTimeRange.y);
+        _heightOffset = heightOffset;
         
         _stateMachine.AddNode(DragonState.MoveLeft, () =>
         {
@@ -84,10 +86,12 @@ public class PhaseCController : MonoBehaviour
         _stateMachine.AddNode(DragonState.Come, () =>
         {
             _radius -= speed * Time.deltaTime;
+            _heightOffset = Mathf.Lerp(heightOffset, 0f, _timer / (maxRadius - minRadius) * speed);
             UpdatePosition(_radius,_theta);
         }, () =>
         {
             Debug.Log("Enter Come");
+            _timer = 0f;
         }, () =>
         {
             if (_radius < minRadius)
@@ -111,11 +115,13 @@ public class PhaseCController : MonoBehaviour
         _stateMachine.AddNode(DragonState.Leave, () =>
         {
             _radius += speed * Time.deltaTime;
+            _heightOffset = Mathf.Lerp(0f,heightOffset,  _timer / (maxRadius - minRadius) * speed);
             UpdatePosition(_radius,_theta);
         }, () =>
         {
             Debug.Log("Enter Leave");
             _isAnimationOver = false;
+            _timer = 0f;
         }, () =>
         {
             _timer = 0f;
@@ -145,5 +151,8 @@ public class PhaseCController : MonoBehaviour
         _stateMachine.Update();
         transform.LookAt(_origin);
         transform.Rotate(Vector3.up,-90f);
+        var euler = transform.rotation.eulerAngles;
+        euler.z = 0f;
+        transform.rotation=Quaternion.Euler(euler);
     }
 }

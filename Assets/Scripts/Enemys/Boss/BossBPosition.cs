@@ -16,7 +16,7 @@ public class BossBPosition : MonoBehaviour
     {
         _phaseManager = FindObjectOfType<PhaseManager>();
         _playerTransform = FindObjectOfType<PlayerMove_1005>().transform;
-        
+
         direction = direction.normalized;
         var tempVec = direction * distance;
         _keepVec = new Vector3(tempVec.x, height, tempVec.y);
@@ -27,9 +27,10 @@ public class BossBPosition : MonoBehaviour
 
     void Update()
     {
-        float deltaHeight = Mathf.Lerp(0f, -40f, Timeline.CurrentTime / _phaseManager.phaseBTime);
-        var dis = Mathf.Lerp(distance, 100f, Timeline.CurrentTime / _phaseManager.phaseBTime);
-        var vec = _keepVec * dis;
-        transform.position = _playerTransform.position + vec + Vector3.up * deltaHeight;
+        float deltaHeight = Mathf.Lerp(0f, 60f, Timeline.CurrentTime / _phaseManager.phaseBTime);
+        var dis = Mathf.Lerp(distance, 150f, Timeline.CurrentTime / _phaseManager.phaseBTime);
+        var vec = _keepVec * dis + _playerTransform.position;
+        vec.y = _playerTransform.position.y + deltaHeight;
+        transform.position = vec;
     }
 }
