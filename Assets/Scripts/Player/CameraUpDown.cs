@@ -54,7 +54,6 @@ public class CameraUpDown : MonoBehaviour
     void UpdateHeight()
     {
         _currentHeight = camerasTransform.position.y;
-        Debug.Log($"{_currentHeight} {_targetHeight}");
         if (Mathf.Approximately(_currentHeight, _targetHeight))
             return;
         if (_currentHeight < _targetHeight)
