@@ -7390,7 +7390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemys: {fileID: 3241544478321920789, guid: d492ebef970eb374eb52ca0d2a8a1ea6, type: 3}
-  appearNextTime: 1
+  appearNextTime: 21
 --- !u!4 &648907496
 Transform:
   m_ObjectHideFlags: 0
@@ -21436,7 +21436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3563f59b79b3532449c3b2f3ffcd16e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phaseATime: 0
+  phaseATime: 20
   phaseBTime: 20
   phaseCTime: 20
 --- !u!4 &1945914581
