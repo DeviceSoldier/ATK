@@ -30,11 +30,8 @@ public class PhaseManager : MonoBehaviour
             FindObjectOfType<Doragon_Attack_A_Test>().enabled = false;
             FindObjectOfType<PhaseA_TargetLook>().enabled = false;
         });
-        
-        StateMachine.AddNode(GamePhase.AtoBMovie,()=>{}, () =>
-        {
-            Timeline.ResetTimer();
-        }, () => { });
+
+        StateMachine.AddNode(GamePhase.AtoBMovie, () => { }, () => { Timeline.ResetTimer(); }, () => { });
 
         StateMachine.AddNode(GamePhase.B, () => { }, () =>
         {
@@ -57,6 +54,10 @@ public class PhaseManager : MonoBehaviour
             Timeline.ResetTimer();
             //_dragon.GetComponent<BossCPosition>().enabled = true;
             _dragon.GetComponent<PhaseCController>().enabled = true;
+            var cam = _player.GetComponent<CameraUpDown>();
+            cam.enabled = true;
+            cam.SetTargetHeight(20f);
+            //GameObject.Find("Cameras").transform.Translate(0f, 20f, 0f);
         }, () =>
         {
             Debug.Log("Leave phase C");
@@ -74,7 +75,6 @@ public class PhaseManager : MonoBehaviour
 
             // todo real result process
             FindObjectOfType<VideoChange>().ChangeVideo(ResultHandler.Rank);
-            
         }, () => { });
 
         StateMachine.AddEdge(GamePhase.A, GamePhase.AtoBMovie, () => Timeline.CurrentTime > phaseATime);
