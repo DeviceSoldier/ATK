@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.12949482, g: 0.2764088, b: 0.40601677, a: 1}
+  m_IndirectSpecularColor: {r: 0.12948734, g: 0.27640095, b: 0.40601087, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7389,8 +7389,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f84f77faa6635ab44b93972dba211410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemys: {fileID: 7515807583206325362, guid: d147ad4769898ba4492f29f096f81206, type: 3}
-  appearNextTime: 21
+  enemys: {fileID: 3241544478321920789, guid: d492ebef970eb374eb52ca0d2a8a1ea6, type: 3}
+  appearNextTime: 1
 --- !u!4 &648907496
 Transform:
   m_ObjectHideFlags: 0
@@ -7399,7 +7399,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 648907494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 494.62427, y: 3706, z: 860}
+  m_LocalPosition: {x: 510, y: 3486.2, z: 1114.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -21436,7 +21436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3563f59b79b3532449c3b2f3ffcd16e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phaseATime: 20
+  phaseATime: 0
   phaseBTime: 20
   phaseCTime: 20
 --- !u!4 &1945914581

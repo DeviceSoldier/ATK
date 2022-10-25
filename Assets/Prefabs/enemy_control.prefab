@@ -77,9 +77,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upForce: 600
   isJump: 0
-  speed: 10
+  speed: 15
   cubeB: {fileID: 2350726221405686258}
-  jumpPoint: 20
+  jumpPoint: 15
   deleteCount: 0
   delete: 0
 --- !u!1 &8748586689945656727
@@ -881,7 +881,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeA: {fileID: 8750143754181935891}
-  jumpPoint: 20
+  jumpPoint: 15
 --- !u!1 &8750144434595533081
 GameObject:
   m_ObjectHideFlags: 0
