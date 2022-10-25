@@ -12,6 +12,7 @@ TagManager:
   - NavigationLine
   - Impact
   - Leftarm
+  - Boss
   layers:
   - Default
   - TransparentFX

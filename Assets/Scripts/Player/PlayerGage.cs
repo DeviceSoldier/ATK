@@ -16,11 +16,14 @@ public class PlayerGage : MonoBehaviour
 
 	private void OnCollisionEnter(Collision collision)
 	{
-		if (collision.gameObject.tag == "Bullet")
+		if (collision.gameObject.CompareTag("Bullet"))
 		{
 			gage.Add(-phaseABulletDamage);
 		}
-
+		if (collision.gameObject.CompareTag("Boss"))
+		{
+			gage.Add(-0.15f);
+		}
 	}
 
 }

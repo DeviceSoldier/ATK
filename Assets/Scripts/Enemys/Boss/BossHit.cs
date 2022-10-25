@@ -19,6 +19,13 @@ public class BossHit : MonoBehaviour
         if (collision.gameObject.CompareTag("PlayerBullet"))
         {
             _bossHp.TakeDamage(hitdamage);
+            FindObjectOfType<PlayerGage>().gage.Add(0.04f);
+        }
+        
+        if (collision.gameObject.CompareTag("Leftarm")||collision.gameObject.CompareTag("Guard"))
+        {
+            _bossHp.TakeDamage(hitdamage);
+            collision.gameObject.GetComponentInParent<PlayerGage>().gage.Add(0.04f);
         }
     }
 }
