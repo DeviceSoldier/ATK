@@ -13,7 +13,7 @@ public class VideoChange : MonoBehaviour
     [SerializeField] private VideoClip[] _videoClips;
     private VideoPlayer[] _videoPlayers;
     private ResultRank _resultRank;
-    
+
     public void ChangeVideo(ResultRank rank)
     {
         _resultRank = rank;
@@ -23,16 +23,10 @@ public class VideoChange : MonoBehaviour
             vp.Play();
         });
     }
-    
+
     void Start()
     {
         _videoPlayers = GetComponents<VideoPlayer>();
-        _videoPlayers.ForEach(vp =>
-        {
-            vp.loopPointReached += (vp) =>
-            {
-                Nissensai2022.Runtime.Nissensai.SendResult(_resultRank);
-            };
-        });
+        _videoPlayers[0].loopPointReached += (vp) => { Nissensai2022.Runtime.Nissensai.SendResult(_resultRank); };
     }
 }

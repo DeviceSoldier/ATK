@@ -23,6 +23,8 @@ public class LeapMotionMoveFollowingEyeTracker : MonoBehaviour
     public float TurnMultiplier = 1.5f;
     public Transform HandParentTransform;
     public Camera _usedCamera;
+    public float rotationOffset;
+    public float heightOffset;
 
     //public bool IsAiming { get; set; }
 
@@ -209,9 +211,14 @@ public class LeapMotionMoveFollowingEyeTracker : MonoBehaviour
         }
 
         //var worldPos = transformToRotate.TransformPoint(Vector3.forward * Radius);
-        var worldPos = transformToRotate.rotation * (Vector3.forward * Radius);
-        HandParentTransform.position = worldPos + GameObject.Find("PlayerOBJ").transform.position;
+        
         HandParentTransform.rotation = transformToRotate.rotation;
+        HandParentTransform.Rotate(Vector3.up,rotationOffset);
+        var rotation = HandParentTransform.rotation.eulerAngles;
+        HandParentTransform.rotation=Quaternion.Euler(rotation.x,rotation.y,0f);
+        
+        var worldPos = HandParentTransform.rotation * (Vector3.forward * Radius);
+        HandParentTransform.position = worldPos + GameObject.Find("PlayerOBJ").transform.position+Vector3.up*heightOffset;
 
         //HandParentTransform.rotation = transformToRotate.rotation;
     }

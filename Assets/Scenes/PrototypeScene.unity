@@ -248,6 +248,8 @@ MonoBehaviour:
   TurnMultiplier: 3
   HandParentTransform: {fileID: 735886256}
   _usedCamera: {fileID: 348356283}
+  rotationOffset: 90
+  heightOffset: 0.3
 --- !u!4 &32192926 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3977365282198197480, guid: 98bd1645b1b8d7a4d93c120852cde4a8, type: 3}
@@ -21980,8 +21982,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3563f59b79b3532449c3b2f3ffcd16e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phaseATime: 1
-  phaseBTime: 1
+  phaseATime: 20
+  phaseBTime: 20
   phaseCTime: 20
 --- !u!4 &1945914581
 Transform:

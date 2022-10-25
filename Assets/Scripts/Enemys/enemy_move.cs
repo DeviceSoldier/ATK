@@ -54,19 +54,29 @@ public class enemy_move : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider col)
+    /*void OnTriggerEnter(Collider col)
     {
         if (col.CompareTag("Player"))
         {
             delete = true;
         }
-    }
+    }*/
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Impact")&&!Mathf.Approximately(speed,0f))
         {
             speed = 0f;
+        }
+        else if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponentInParent<PlayerGage>().gage.Add(-0.02f);
+            Destroy(this.gameObject);
+        }
+        else if (collision.gameObject.CompareTag("Leftarm")||collision.gameObject.CompareTag("Guard"))
+        {
+            collision.gameObject.GetComponentInParent<PlayerGage>().gage.Add(0.03f);
+            Destroy(this.gameObject);
         }
     }
 }
