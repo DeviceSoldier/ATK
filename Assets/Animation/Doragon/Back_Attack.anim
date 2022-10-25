@@ -4880,7 +4880,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 2.3
-        value: {x: 0, y: 2.66, z: 7}
+        value: {x: 0, y: 1.2779, z: 7.5}
         inSlope: {x: 0, y: -0.005496088, z: 0}
         outSlope: {x: 0, y: -0.005496088, z: 0}
         tangentMode: 0
@@ -6428,7 +6428,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 2.3
-        value: 2.66
+        value: 1.2779
         inSlope: -0.005496088
         outSlope: -0.005496088
         tangentMode: 0
@@ -6519,7 +6519,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 2.3
-        value: 7
+        value: 7.5
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -44019,6 +44019,20 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
+  - time: 2.1
+    functionName: EnterSlowMotion
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 2.3
+    functionName: LeaveSlowMotion
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 3
     functionName: AnimationOver
     data: 
