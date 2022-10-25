@@ -8491,7 +8491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxRadius: 150
-  minRadius: 50
+  minRadius: 80
   speed: 100
   maxTheta: 1.5707964
   idleTimeRange: {x: 0.5, y: 1}
@@ -21981,7 +21981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phaseATime: 1
-  phaseBTime: 5
+  phaseBTime: 1
   phaseCTime: 20
 --- !u!4 &1945914581
 Transform:
