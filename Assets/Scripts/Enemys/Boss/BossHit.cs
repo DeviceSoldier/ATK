@@ -28,4 +28,13 @@ public class BossHit : MonoBehaviour
             collision.gameObject.GetComponentInParent<PlayerGage>().gage.Add(0.04f);
         }
     }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Leftarm")||collision.gameObject.CompareTag("Guard"))
+        {
+            Debug.Log("Attack");
+            
+        }
+    }
 }
