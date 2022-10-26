@@ -21939,9 +21939,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3563f59b79b3532449c3b2f3ffcd16e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phaseATime: 30
+  phaseATime: 20
   phaseBTime: 20
-  phaseCTime: 30
+  phaseCTime: 35
 --- !u!4 &1945914581
 Transform:
   m_ObjectHideFlags: 0
