@@ -13,6 +13,10 @@ TagManager:
   - Impact
   - Leftarm
   - Boss
+  - run
+  - jump
+  - fall
+  - landing
   layers:
   - Default
   - TransparentFX

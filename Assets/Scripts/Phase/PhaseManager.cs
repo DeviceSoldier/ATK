@@ -8,16 +8,19 @@ public class PhaseManager : MonoBehaviour
 {
     public StateMachine<GamePhase> StateMachine { get; private set; } = new StateMachine<GamePhase>();
     [SerializeField] public float phaseATime = 20f;
+    [SerializeField] public float phaseAtoBTime = 20f;
     [SerializeField] public float phaseBTime = 20f;
     [SerializeField] public float phaseCTime = 20f;
 
     private GameObject _player;
     private GameObject _dragon;
+    private GameObject _hero;
 
     private void Start()
     {
         _player = FindObjectOfType<PhaseA_TargetLook>().gameObject;
         _dragon = FindObjectOfType<Doragon_Move_A_Test>().gameObject;
+        _hero = FindObjectOfType<Hero_move>().gameObject;
 
         StateMachine.AddNode(GamePhase.A, () => { }, () =>
         {
@@ -31,7 +34,18 @@ public class PhaseManager : MonoBehaviour
             FindObjectOfType<PhaseA_TargetLook>().enabled = false;
         });
 
-        StateMachine.AddNode(GamePhase.AtoBMovie, () => { }, () => { Timeline.ResetTimer(); }, () => { });
+        StateMachine.AddNode(GamePhase.AtoBMovie, () => { }, () =>
+        {
+            Debug.Log("Enter phase AtoB");
+            Timeline.ResetTimer(); 
+            _player.GetComponent<PhaseAtoB>().enabled = true;
+            _hero.GetComponent<Hero_move>().enabled = true;
+        }, () =>
+        {
+            Debug.Log("Leave phase AtoB");
+            _player.GetComponent<PhaseAtoB>().enabled = false;
+            _hero.GetComponent<Hero_move>().enabled = false;
+        });
 
         StateMachine.AddNode(GamePhase.B, () => { }, () =>
         {
@@ -78,7 +92,7 @@ public class PhaseManager : MonoBehaviour
         }, () => { });
 
         StateMachine.AddEdge(GamePhase.A, GamePhase.AtoBMovie, () => Timeline.CurrentTime > phaseATime);
-        StateMachine.AddEdge(GamePhase.AtoBMovie, GamePhase.B, () => Timeline.CurrentTime > 0f);
+        StateMachine.AddEdge(GamePhase.AtoBMovie, GamePhase.B, () => Timeline.CurrentTime > phaseAtoBTime);
         StateMachine.AddEdge(GamePhase.B, GamePhase.C, () => Timeline.CurrentTime > phaseBTime);
         StateMachine.AddEdge(GamePhase.C, GamePhase.Result, () => Timeline.CurrentTime > phaseCTime);
 
