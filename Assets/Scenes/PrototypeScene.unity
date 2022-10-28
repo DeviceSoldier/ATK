@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.12948734, g: 0.27640095, b: 0.40601087, a: 1}
+  m_IndirectSpecularColor: {r: 0.12949482, g: 0.2764088, b: 0.40601677, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11553,8 +11553,8 @@ MonoBehaviour:
   Enemy: {fileID: 742416830}
   Bullet: {fileID: 3799213099928599575, guid: 06383667fa1290243a8c85d6bd6c8e02, type: 3}
   hitcount: 0.65
-  bullets: {fileID: 0}
-  fire: {fileID: 0}
+  bullets: {fileID: 966519714}
+  fire: {fileID: 100004, guid: 417d95259df90e4488eb927fde45cba3, type: 3}
 --- !u!65 &966519717
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13673,8 +13673,8 @@ MonoBehaviour:
   Enemy: {fileID: 742416830}
   Bullet: {fileID: 3799213099928599575, guid: 06383667fa1290243a8c85d6bd6c8e02, type: 3}
   hitcount: 0.65
-  bullets: {fileID: 0}
-  fire: {fileID: 0}
+  bullets: {fileID: 1176275022}
+  fire: {fileID: 100004, guid: 417d95259df90e4488eb927fde45cba3, type: 3}
 --- !u!65 &1176275025
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22528,7 +22528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phaseATime: 20
-  phaseAtoBTime: 20
+  phaseAtoBTime: 10
   phaseBTime: 20
   phaseCTime: 35
 --- !u!4 &1945914581
