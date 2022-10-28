@@ -50,6 +50,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3241544478321920788}
     m_Modifications:
+    - target: {fileID: 2350726221405686257, guid: 75f36dd4aa526b846b49e3275760bf83, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2350726221405686258, guid: 75f36dd4aa526b846b49e3275760bf83, type: 3}
       propertyPath: m_Name
       value: enemy_control (10)
@@ -120,6 +124,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3241544478321920788}
     m_Modifications:
+    - target: {fileID: 2350726221405686257, guid: 75f36dd4aa526b846b49e3275760bf83, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2350726221405686258, guid: 75f36dd4aa526b846b49e3275760bf83, type: 3}
       propertyPath: m_Name
       value: enemy_control (6)
@@ -190,6 +198,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3241544478321920788}
     m_Modifications:
+    - target: {fileID: 2350726221405686257, guid: 75f36dd4aa526b846b49e3275760bf83, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2350726221405686258, guid: 75f36dd4aa526b846b49e3275760bf83, type: 3}
       propertyPath: m_Name
       value: enemy_control (8)
@@ -260,6 +272,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3241544478321920788}
     m_Modifications:
+    - target: {fileID: 2350726221405686257, guid: 75f36dd4aa526b846b49e3275760bf83, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2350726221405686258, guid: 75f36dd4aa526b846b49e3275760bf83, type: 3}
       propertyPath: m_Name
       value: enemy_control (5)
@@ -330,6 +346,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3241544478321920788}
     m_Modifications:
+    - target: {fileID: 2350726221405686257, guid: 75f36dd4aa526b846b49e3275760bf83, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2350726221405686258, guid: 75f36dd4aa526b846b49e3275760bf83, type: 3}
       propertyPath: m_Name
       value: enemy_control (3)
@@ -400,6 +420,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3241544478321920788}
     m_Modifications:
+    - target: {fileID: 2350726221405686257, guid: 75f36dd4aa526b846b49e3275760bf83, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2350726221405686258, guid: 75f36dd4aa526b846b49e3275760bf83, type: 3}
       propertyPath: m_Name
       value: enemy_control (4)
@@ -470,6 +494,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3241544478321920788}
     m_Modifications:
+    - target: {fileID: 2350726221405686257, guid: 75f36dd4aa526b846b49e3275760bf83, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2350726221405686258, guid: 75f36dd4aa526b846b49e3275760bf83, type: 3}
       propertyPath: m_Name
       value: enemy_control (2)
@@ -540,6 +568,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3241544478321920788}
     m_Modifications:
+    - target: {fileID: 2350726221405686257, guid: 75f36dd4aa526b846b49e3275760bf83, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2350726221405686258, guid: 75f36dd4aa526b846b49e3275760bf83, type: 3}
       propertyPath: m_Name
       value: enemy_control (11)
@@ -610,6 +642,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3241544478321920788}
     m_Modifications:
+    - target: {fileID: 2350726221405686257, guid: 75f36dd4aa526b846b49e3275760bf83, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2350726221405686258, guid: 75f36dd4aa526b846b49e3275760bf83, type: 3}
       propertyPath: m_Name
       value: enemy_control (7)
@@ -680,6 +716,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3241544478321920788}
     m_Modifications:
+    - target: {fileID: 2350726221405686257, guid: 75f36dd4aa526b846b49e3275760bf83, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2350726221405686258, guid: 75f36dd4aa526b846b49e3275760bf83, type: 3}
       propertyPath: m_Name
       value: enemy_control (9)
@@ -750,6 +790,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3241544478321920788}
     m_Modifications:
+    - target: {fileID: 2350726221405686257, guid: 75f36dd4aa526b846b49e3275760bf83, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2350726221405686258, guid: 75f36dd4aa526b846b49e3275760bf83, type: 3}
       propertyPath: m_Name
       value: enemy_control (1)
@@ -820,6 +864,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3241544478321920788}
     m_Modifications:
+    - target: {fileID: 2350726221405686257, guid: 75f36dd4aa526b846b49e3275760bf83, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2350726221405686258, guid: 75f36dd4aa526b846b49e3275760bf83, type: 3}
       propertyPath: m_Name
       value: enemy_control
@@ -890,6 +938,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3241544478321920788}
     m_Modifications:
+    - target: {fileID: 2350726221405686257, guid: 75f36dd4aa526b846b49e3275760bf83, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2350726221405686258, guid: 75f36dd4aa526b846b49e3275760bf83, type: 3}
       propertyPath: m_Name
       value: enemy_control (12)
