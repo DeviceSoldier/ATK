@@ -43,6 +43,19 @@ public class LeapPunchandSnap : MonoBehaviour
                 Vector3 vec = Enemy.transform.position - pos;
             }
         }
+        if (CompareTag("Enemy"))
+        {
+            if (velocity.magnitude >= hitcount)
+            {
+                Destroy(collision.gameObject);
+                var pos = this.gameObject.transform.position;
+            
+                var t = Instantiate(fire) as GameObject;
+                t.transform.position = pos;
+            
+                Vector3 vec = bullets.transform.position - pos;
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)

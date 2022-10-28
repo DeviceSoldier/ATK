@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 882d7cf94312687499842110e8fcd184, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -2506,6 +2506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slowMotion: 0.1
+  target: {fileID: 0}
 --- !u!4 &134240290 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3977365282198197480, guid: 98bd1645b1b8d7a4d93c120852cde4a8, type: 3}
@@ -8443,6 +8444,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitdamage: 1
+  bullets: {fileID: 0}
+  fire: {fileID: 0}
 --- !u!114 &709207672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11301,6 +11304,8 @@ MonoBehaviour:
   Enemy: {fileID: 742416830}
   Bullet: {fileID: 4633477985480247552, guid: 1add5a28362d00849a483265d6682739, type: 3}
   hitcount: 0.65
+  bullets: {fileID: 966519714}
+  fire: {fileID: 100004, guid: 417d95259df90e4488eb927fde45cba3, type: 3}
 --- !u!65 &966519717
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13266,6 +13271,8 @@ MonoBehaviour:
   Enemy: {fileID: 742416830}
   Bullet: {fileID: 4633477985480247552, guid: 1add5a28362d00849a483265d6682739, type: 3}
   hitcount: 0.65
+  bullets: {fileID: 1176275022}
+  fire: {fileID: 100004, guid: 417d95259df90e4488eb927fde45cba3, type: 3}
 --- !u!65 &1176275025
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18974,6 +18981,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1674003481}
   - component: {fileID: 1674003482}
+  - component: {fileID: 1674003483}
   m_Layer: 0
   m_Name: OptionObject
   m_TagString: Untagged
@@ -19008,6 +19016,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2252ae6d57c22cd438e50fc05afce414, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1674003483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674003480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c19e60e7eb2464242813db1fe67d52c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1676333576
@@ -21725,6 +21745,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phaseATime: 20
+  phaseAtoBTime: 20
   phaseBTime: 20
   phaseCTime: 20
 --- !u!4 &1945914581
@@ -22428,6 +22449,7 @@ MonoBehaviour:
   maxHp: 100
   godMode: 0
   deleteobj: {fileID: 709207668}
+  Slider: {fileID: 0}
 --- !u!4 &2046207502
 Transform:
   m_ObjectHideFlags: 0

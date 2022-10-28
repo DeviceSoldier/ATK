@@ -9,6 +9,6 @@ public class GameStartCallback : MonoBehaviour
 {
     public void OnGameStart()
     {
-        SceneManager.LoadScene("PrototypeScene");
+        SceneManager.LoadScene("TestScene");
     }
 }

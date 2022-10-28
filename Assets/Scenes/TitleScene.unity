@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 9fd8026ee33e28e45b83f6d4cd8d9128, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -298,6 +298,7 @@ GameObject:
   - component: {fileID: 404951654}
   - component: {fileID: 404951653}
   - component: {fileID: 404951656}
+  - component: {fileID: 404951657}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -382,6 +383,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94e50b946a17e7c4c994d8ee6781573b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &404951657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404951652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c19e60e7eb2464242813db1fe67d52c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &467106630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -391,7 +404,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 659776194, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4083104523005850677, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
       propertyPath: m_AnchorMax.x
@@ -411,7 +424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4083104523579276212, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 875
+      value: 1550
       objectReference: {fileID: 0}
     - target: {fileID: 6215391168588047137, guid: 1b523c566395c5e4caaa4a446a832214, type: 3}
       propertyPath: m_Name
