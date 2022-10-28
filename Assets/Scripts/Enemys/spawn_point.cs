@@ -18,7 +18,7 @@ public class spawn_point : MonoBehaviour
         spawn_time += 1 * Time.deltaTime;
         delete += 1 * Time.deltaTime;
 
-        if (spawn_time >= 20)
+        if (spawn_time >= 30)
         {
             spawn = true;
             spawn_time = 0;

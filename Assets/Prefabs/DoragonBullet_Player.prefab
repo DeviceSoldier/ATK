@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ff6feac2af2f14683acaf060a81c61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.75
+  speed: 1
 --- !u!135 &1287589532925817393
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -166,7 +166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: d16c2159461103c41897f0b3f370db7a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: d16c2159461103c41897f0b3f370db7a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -195,6 +195,18 @@ PrefabInstance:
     - target: {fileID: 400006, guid: d16c2159461103c41897f0b3f370db7a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: d16c2159461103c41897f0b3f370db7a, type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: d16c2159461103c41897f0b3f370db7a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000014263995076, guid: d16c2159461103c41897f0b3f370db7a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d16c2159461103c41897f0b3f370db7a, type: 3}
