@@ -7835,7 +7835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemys: {fileID: 3241544478321920789, guid: d492ebef970eb374eb52ca0d2a8a1ea6, type: 3}
-  appearNextTime: 31
+  appearNextTime: 3
 --- !u!4 &648907496
 Transform:
   m_ObjectHideFlags: 0
@@ -18072,7 +18072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f8241871bdd3394a8bce28111a9e6df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitdamage: 1
+  hitdamage: 2
   bullets: {fileID: 1449432552}
   fire: {fileID: 100004, guid: 417d95259df90e4488eb927fde45cba3, type: 3}
 --- !u!65 &1449432555
@@ -22527,8 +22527,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3563f59b79b3532449c3b2f3ffcd16e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phaseATime: 20
-  phaseAtoBTime: 10
+  phaseATime: 1
+  phaseAtoBTime: 1
   phaseBTime: 20
   phaseCTime: 35
 --- !u!4 &1945914581
