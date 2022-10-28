@@ -10,7 +10,7 @@ public class ImpactScale : MonoBehaviour
 
     public float size = 100f;
     public GameObject target;
-    public Vector3 speed = new Vector3(2, 2, 2);
+    public Vector3 speed = new Vector3(5, 5, 5);
 
     void Update()
     {
