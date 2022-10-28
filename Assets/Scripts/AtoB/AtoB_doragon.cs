@@ -6,32 +6,50 @@ using UnityEngine;
 public class AtoB_doragon : MonoBehaviour
 {
     [SerializeField] private Transform phaseAtoBStartPoint;
-    private GameObject A;
-    private GameObject B;
+    private GameObject AtoB_a;
+    private GameObject AtoB_b;
     public float speed;
-    public bool start;
-    public bool end;
+    public bool up;
+    public bool down;
     void Start()
     {
-        A = GameObject.Find("AtoB_A");
-        B = GameObject.Find("AtoB_B");
+        AtoB_a = GameObject.Find("AtoB_A");
+        AtoB_b = GameObject.Find("AtoB_B");
         transform.position = phaseAtoBStartPoint.position;
-        start = true;
-        end = false;
+        up = true;
+        down = false;
+        speed = 100.0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (start == true)
+        if (up == true)
         {
-            this.transform.position = Vector3.MoveTowards(this.transform.position, new Vector3(A.transform.position.x, A.transform.position.y, A.transform.position.z), speed * Time.deltaTime);
+            this.transform.position = Vector3.MoveTowards(this.transform.position, new Vector3(AtoB_a.transform.position.x, AtoB_a.transform.position.y, AtoB_a.transform.position.z), speed * Time.deltaTime);
         }
 
-        if (end == true)
+        if (down == true)
         {
-            this.transform.position = Vector3.MoveTowards(this.transform.position, new Vector3(B.transform.position.x, B.transform.position.y, B.transform.position.z), speed * Time.deltaTime);
-            start = false;
+            this.transform.position = Vector3.MoveTowards(this.transform.position, new Vector3(AtoB_b.transform.position.x, AtoB_b.transform.position.y, AtoB_b.transform.position.z), speed * Time.deltaTime);
+            up = false;
+        }
+    }
+    
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.CompareTag("up"))
+        {
+            up = false;
+            down = true;
+            speed = 100f;
+        }
+
+        if (col.CompareTag("down"))
+        {
+            down = false;
+            down = false;
+            speed = 0f;
         }
     }
 }
