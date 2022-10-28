@@ -17,6 +17,8 @@ TagManager:
   - jump
   - fall
   - landing
+  - up
+  - down
   layers:
   - Default
   - TransparentFX

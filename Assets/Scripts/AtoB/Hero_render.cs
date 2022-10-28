@@ -18,6 +18,11 @@ public class Hero_render : MonoBehaviour
     {
         Timer += Time.deltaTime;
         
+        if (Timer <= 20.0f)
+        {
+            hero.GetComponent<Hero_active>().heroHide();
+        }
+        
         if (Timer >= 20.0f)
         {
             hero.GetComponent<Hero_active>().heroActive();

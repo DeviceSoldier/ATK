@@ -44,11 +44,13 @@ public class PhaseManager : MonoBehaviour
             Timeline.ResetTimer();
             _player.GetComponent<PhaseAtoB>().enabled = true;
             _hero.GetComponent<Hero_move>().enabled = true;
+            _dragon.GetComponent<AtoB_doragon>().enabled = true;
         }, () =>
         {
             Debug.Log("Leave phase AtoB");
             _player.GetComponent<PhaseAtoB>().enabled = false;
             _hero.GetComponent<Hero_move>().enabled = false;
+            _dragon.GetComponent<AtoB_doragon>().enabled = false;
         });
 
         StateMachine.AddNode(GamePhase.B, () => { }, () =>
