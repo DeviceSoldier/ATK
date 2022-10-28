@@ -12,7 +12,8 @@ public class LeapPunchandSnap : MonoBehaviour
     public GameObject Enemy;
     public GameObject Bullet;
     public float hitcount;
-
+    public GameObject bullets;
+    public GameObject fire;
     void Start()
     {
         prevPosition = transform.position;
@@ -51,6 +52,12 @@ public class LeapPunchandSnap : MonoBehaviour
             if (velocity.magnitude >= hitcount)
             {
                 Destroy(other.gameObject);
+                var pos = this.gameObject.transform.position;
+            
+                var t = Instantiate(fire) as GameObject;
+                t.transform.position = pos;
+            
+                Vector3 vec = bullets.transform.position - pos;
             }
         }
     }
