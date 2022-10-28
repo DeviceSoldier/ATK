@@ -19,7 +19,7 @@ public class BulletDelete_PlayerBullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Boss")
         {
             Destroy(this.gameObject);
         }

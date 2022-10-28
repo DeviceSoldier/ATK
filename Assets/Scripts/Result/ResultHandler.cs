@@ -15,13 +15,13 @@ public class ResultHandler
     {
         Result = damage * multiplier;
         Percentage = Result / max;
-        if (Percentage >= 1.0f)
+        if (Percentage <= 0.0f)
             Rank = ResultRank.A;
-        else if (Percentage >= 0.8f)
+        else if (Percentage <= 0.2f)
             Rank = ResultRank.B;
-        else if (Percentage >= 0.6f)
+        else if (Percentage <= 0.4f)
             Rank = ResultRank.C;
-        else if (Percentage >= 0.4f)
+        else if (Percentage <= 0.6f)
             Rank = ResultRank.D;
         else
             Rank = ResultRank.E;

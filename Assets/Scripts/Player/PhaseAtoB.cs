@@ -32,12 +32,12 @@ public class PhaseAtoB : MonoBehaviour
 
         timer += Time.deltaTime;
 
-        if (timer >= 3)
+        if (timer >= 3&& timer <= 6.0f)
         {
             positionA = false;
             positionB = true;
         }
-        else if (timer >= 6)
+        else if (timer >= 6 && timer <=8.0f)
         {
             positionB = false;
             positionC = true;

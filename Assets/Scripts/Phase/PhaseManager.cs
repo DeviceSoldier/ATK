@@ -29,15 +29,19 @@ public class PhaseManager : MonoBehaviour
         }, () =>
         {
             Debug.Log("Leave phase A");
-            FindObjectOfType<Doragon_Move_A_Test>().enabled = false;
-            FindObjectOfType<Doragon_Attack_A_Test>().enabled = false;
+            if (_dragon != null)
+            {
+                FindObjectOfType<Doragon_Move_A_Test>().enabled = false;
+                FindObjectOfType<Doragon_Attack_A_Test>().enabled = false;
+            }
+
             FindObjectOfType<PhaseA_TargetLook>().enabled = false;
         });
 
         StateMachine.AddNode(GamePhase.AtoBMovie, () => { }, () =>
         {
             Debug.Log("Enter phase AtoB");
-            Timeline.ResetTimer(); 
+            Timeline.ResetTimer();
             _player.GetComponent<PhaseAtoB>().enabled = true;
             _hero.GetComponent<Hero_move>().enabled = true;
         }, () =>
@@ -53,12 +57,14 @@ public class PhaseManager : MonoBehaviour
             Timeline.ResetTimer();
             _player.GetComponent<PlayerMove_1005>().enabled = true;
             _player.GetComponent<PhaseA_PhaseB>().enabled = true;
-            _dragon.GetComponent<BossBPosition>().enabled = true;
+            if (_dragon != null)
+                _dragon.GetComponent<BossBPosition>().enabled = true;
         }, () =>
         {
             Debug.Log("Leave phase B");
             _player.GetComponent<PhaseA_PhaseB>().enabled = false;
-            _dragon.GetComponent<BossBPosition>().enabled = false;
+            if (_dragon != null)
+                _dragon.GetComponent<BossBPosition>().enabled = false;
             _player.GetComponent<PlayerMove_1005>().enabled = false;
         });
 
@@ -67,7 +73,8 @@ public class PhaseManager : MonoBehaviour
             Debug.Log("Enter phase C");
             Timeline.ResetTimer();
             //_dragon.GetComponent<BossCPosition>().enabled = true;
-            _dragon.GetComponent<PhaseCController>().enabled = true;
+            if (_dragon != null)
+                _dragon.GetComponent<PhaseCController>().enabled = true;
             var cam = _player.GetComponent<CameraUpDown>();
             cam.enabled = true;
             cam.SetTargetHeight(20f);
@@ -76,7 +83,8 @@ public class PhaseManager : MonoBehaviour
         {
             Debug.Log("Leave phase C");
             //_dragon.GetComponent<BossCPosition>().enabled = false;
-            _dragon.GetComponent<PhaseCController>().enabled = false;
+            if (_dragon != null)
+                _dragon.GetComponent<PhaseCController>().enabled = false;
             _player.GetComponent<PlayerMove_1005>().enabled = false;
         });
 

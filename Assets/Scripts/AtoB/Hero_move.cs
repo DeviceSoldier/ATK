@@ -61,7 +61,7 @@ public class Hero_move : MonoBehaviour
         {
             Jump = false;
             Fall = true;
-            speed = 75.0f;
+            speed = 77.5f;
         }
         
         if (col.CompareTag("landing"))
