@@ -112,5 +112,13 @@ public class PhaseManager : MonoBehaviour
     private void Update()
     {
         StateMachine.Update();
+        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            phaseATime = 0f;
+            phaseAtoBTime = 0f;
+            phaseBTime = 0f;
+            phaseCTime = 0f;
+        }
     }
 }
