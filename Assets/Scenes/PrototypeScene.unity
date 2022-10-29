@@ -7835,7 +7835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemys: {fileID: 3241544478321920789, guid: d492ebef970eb374eb52ca0d2a8a1ea6, type: 3}
-  appearNextTime: 3
+  appearNextTime: 31
 --- !u!4 &648907496
 Transform:
   m_ObjectHideFlags: 0
@@ -11591,7 +11591,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 966519714}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63eb49c2601347441978754aecfb991d, type: 3}
   m_Name: 
@@ -18072,7 +18072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f8241871bdd3394a8bce28111a9e6df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitdamage: 2
+  hitdamage: 0.8
   bullets: {fileID: 1449432552}
   fire: {fileID: 100004, guid: 417d95259df90e4488eb927fde45cba3, type: 3}
 --- !u!65 &1449432555
@@ -18086,8 +18086,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.42303467, y: 0.5163574, z: 0.16322327}
-  m_Center: {x: 0.0012512207, y: 0.19836426, z: -0.41838837}
+  m_Size: {x: 0.91918945, y: 1.6853027, z: 0.38941956}
+  m_Center: {x: -0.0020141602, y: 0.26867676, z: -0.30529022}
 --- !u!54 &1449432556
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18098,8 +18098,8 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_AngularDrag: 0.5
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 126
@@ -22529,7 +22529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   phaseATime: 20
   phaseAtoBTime: 10
-  phaseBTime: 20
+  phaseBTime: 15
   phaseCTime: 35
 --- !u!4 &1945914581
 Transform:
